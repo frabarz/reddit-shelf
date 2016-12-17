@@ -1,0 +1,54 @@
+#header-bottom-right {
+    position: static;
+    display: block;
+
+    margin: 0;
+    padding: 0 10px;
+    height: 35px;
+
+    line-height: 35px;
+    font-size: 12px;
+    text-align: right;
+
+    color: #000;
+    background: $color-pinkblood;
+    border-radius: 0;
+
+    @include material-shadow(1);
+
+    > a,
+    > span,
+    > ul,
+    > form {
+        position: static;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .loggedin & .user {
+        display: block;
+        margin-bottom: 10px;
+
+        font-size: 10px;
+        line-height: 10px;
+        text-align: right;
+
+        color: #fff;
+
+        a {
+            display: inline-block;
+            font-size: 20px;
+            line-height: 20px;
+
+            vertical-align: top;
+        }
+    }
+
+    .separator {
+        visibility: hidden;
+    }
+
+    .pref-lang {
+        font-weight: normal
+    }
+}

@@ -1,0 +1,66 @@
+.side {
+    position: relative;
+    z-index: 1000;
+
+    width: 300px;
+    margin: 0;
+    padding: 8px;
+    padding-top: 16px + 40px + $announcements-space;
+
+    color: mix(#000, $color-sideborders, 20%);
+    background: $color-background;
+
+    .spacer {
+        margin: 0 0 8px;
+
+        input {
+            padding: 6px 12px;
+
+            color: #738491;
+            background: #fff;
+            border: 1px solid #c3cfd6;
+            box-shadow: none;
+
+            transition: border-color .15s ease,color .15s ease;
+
+            &:hover {
+                border-color: #738491;
+            }
+
+            &:active {
+                border-color: #24a0ed;
+                color: #292f34
+            }
+        }
+    }
+
+    .login-form {
+        background: #c3cfd6;
+        border-width: 1px 0;
+        border-color: rgba(#000, 0.1);
+    }
+
+    .titlebox .bottom {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding: 0 10px;
+
+        background: rgba(0,0,0,.05);
+        border-top: 1px solid rgba(0,0,0,.1);
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        height: 22px;
+        line-height: 22px;
+
+        .age {
+            letter-spacing: -1px;
+        }
+
+        time {
+            letter-spacing: 0;
+        }
+
+        .flair {
+            display: none;
+        }
+    }
+}

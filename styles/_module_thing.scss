@@ -1,0 +1,42 @@
+.thing {
+    .entry {
+        margin: 0;
+    }
+
+    .flat-list {
+        padding: 0 10px;
+
+        white-space: nowrap;
+
+        color: mix(#000, #fff, 50%);
+
+        .listing-page & {
+            text-overflow: clip;
+            overflow: hidden;
+        }
+
+        li {
+            a {
+                display: block;
+
+                line-height: 30px;
+                font-size: 11px;
+
+                color: inherit;
+
+                &:hover {
+                    color: #242424;
+                }
+            }
+        }
+
+        > .first {
+            margin-right: 1em;
+            color: #000;
+        }
+
+        ~ div {
+            margin-top: 10px;
+        }
+    }
+}

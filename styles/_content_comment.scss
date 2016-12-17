@@ -1,0 +1,228 @@
+.commentarea {
+    .sitetable {
+        padding-right: 10px;
+    }
+}
+
+.panestack-title {
+    padding: 0.5em 1em;
+    margin: 15px 0;
+
+    border: 0 none;
+    border-top: 1px solid #ccc;
+
+    .title {
+        font-size: 20px;
+    }
+}
+
+.thing.comment {
+    position: relative;
+
+    margin: 0;
+    padding: 25px 0 0 40px;
+
+    background: rgba(#000, 0.08);
+    background: transparent;
+
+    &.collapsed {
+        margin-bottom: 15px;
+
+        .midcol {
+            display: none;
+        }
+
+        .entry {
+            border-top: 0 none;
+        }
+
+        .flair {
+            display: inline-block;
+        }
+    }
+
+    .child {
+        margin-top: 0;
+        margin-left: 0;
+        padding-top: 10px;
+
+        border: 0 solid #ccc;
+        border-width: 0 1px;
+        background-color: rgba(#fff, 0.2);
+
+        &:empty {
+            margin-top: 10px;
+            padding-top: 0;
+        }
+    }
+
+    .midcol {
+        position: absolute;
+        left: 0;
+
+        margin: 8px 0;
+        width: 40px;
+
+        .arrow {
+            margin-bottom: 8px;
+            width: 0;
+            height: 0;
+            background: transparent;
+            border: 10px solid transparent;
+            border-top: 0 none;
+
+            &.up {
+                border-bottom: 14px solid #999;
+            }
+
+            &.upmod {
+                border-bottom: 14px solid $color-upvote;
+            }
+
+            &.down {
+                border-top: 14px solid #999;
+            }
+
+            &.downmod {
+                border-top: 14px solid $color-downvote;
+            }
+        }
+    }
+
+    > .entry {
+        overflow: visible;
+
+        background: #fff;
+        border: 1px solid rgba(#000, 0.2);
+
+        & & { background: #ccc; }
+        & & & { background: #fff; }
+    }
+
+    &.new-comment {
+        > .entry,
+        > .entry .author,
+        > .entry .userattrs {
+            background: mix(#fff, #069, 80%);
+        }
+    }
+
+    .tagline {
+        position: absolute;
+        top: 0;
+        left: 40px;
+
+        display: block;
+
+        height: 26px;
+        line-height: 26px;
+        font-size: 14px;
+    }
+
+    .expand {
+        display: inline-block;
+        vertical-align: top;
+
+        margin: 0 -1px 0 0;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+
+        font-size: 18px;
+        text-decoration: none !important;
+
+        color: transparent;
+        background: #fff;
+        border: 1px solid rgba(#000, 0.2);
+
+        position: absolute;
+        left: -40px;
+        z-index: 10;
+        width: 40px;
+        opacity: 0;
+        border: 0 none;
+    }
+
+    .flair {
+        position: absolute;
+        bottom: 0;
+        right: 100%;
+        left: -40px;
+        margin: 0 auto;
+        vertical-align: top;
+    }
+
+    .author,
+    .userattrs {
+        display: inline-block;
+        padding: 0 8px;
+
+        line-height: 24px;
+
+        background: #fff;
+        border: 1px solid rgba(#000, 0.2);
+    }
+
+    .author::before {
+        content: 'u/';
+    }
+
+    .userattrs {
+        padding: 0 4px;
+        margin-left: -0.55em;
+        margin-right: 0.5em;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    .score,
+    time {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .entry > form > .usertext-body {
+        margin: 0;
+        padding: 8px 15px 4px;
+    }
+}
+
+.thing.morechildren {
+    .morecomments {
+        display: block;
+        padding-left: 40px;
+
+        .button {
+            display: inline-block;
+            margin: 0;
+            padding: 6px 10px;
+
+            font-size: 11px !important;
+
+            background: #eee;
+            border: 1px solid #ccc;
+
+            &:hover {
+                background: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.thing.morerecursion {
+
+    .entry {
+        border: 1px solid rgba(#000, 0.2);
+    }
+    .deepthread a {
+        display: block;
+        padding: 10px;
+    }
+
+    // .tagline {
+    //     display: none;
+    // }
+}

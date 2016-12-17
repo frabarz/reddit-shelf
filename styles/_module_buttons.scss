@@ -1,0 +1,15 @@
+.fancy-toggle-button {
+    .add,
+    .remove {
+        padding: .2em 0;
+
+        text-transform: capitalize;
+
+        background: #3c0;
+        border-radius: 0;
+    }
+
+    .option.active {
+        display: block;
+    }
+}

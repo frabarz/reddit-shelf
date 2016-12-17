@@ -1,0 +1,47 @@
+$gradient-watercolor1: linear-gradient(to right top, rgba(#fc0, 0.2), transparent, rgba(green, 0.3));
+$gradient-watercolor2: linear-gradient(to right bottom, rgba(pink, 0.3), transparent, rgba(pink, 0.5));
+
+#header {
+    border: none;
+    background: #fff center/cover;
+    background-image: $gradient-watercolor1, $gradient-watercolor2, $url-papertexture;
+    margin-bottom: 13px;
+}
+
+.content > .menuarea {
+    height: 35px;
+    padding: 0 10px;
+    margin: 0 0 10px;
+
+    font-size: 10px;
+    line-height: 35px;
+    text-transform: uppercase;
+
+    color: #555;
+    background: #EAEAEA;
+    border: none;
+
+    .dropdown {
+        cursor: pointer;
+    }
+
+    .dropdown.lightdrop .selected {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .drop-choices {
+        border: none;
+        margin-top: 5px;
+        padding: 5px;
+
+        a {
+            color: gray;
+
+            &:hover {
+                background: #EEE;
+                color: #333
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+public/
+images/
+resources/
+
+*.html
+*.json
+*.js
+
+flairs.tab
+_dev*
+_special*

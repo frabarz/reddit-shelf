@@ -1,0 +1,55 @@
+.sidebox.submit {
+    // position: absolute;
+    top: $announcements-space;
+
+    width: 148px;
+
+    &.submit-text { left: 0; }
+    &.submit-link { right: 0; }
+
+    .morelink {
+        padding: 3px;
+        height: 40px;
+
+        text-align: center;
+
+        background: #fff !important;
+        border: 1px solid rgba(#000, 0.2);
+        // border-radius: 3px;
+
+        a {
+            display: block;
+            padding: 4px 0;
+            height: 32px;
+
+            line-height: 16px;
+            font-size: 14px;
+            font-weight: normal;
+            text-align: center;
+            text-transform: uppercase;
+
+            color: #FFF;
+            background: #81C784;
+
+            &:hover {
+                background:#6baf75;
+            }
+
+            &:active {
+                background:#5ea96a;
+            }
+        }
+    }
+}
+
+.sidebox.create .morelink,
+.sidebox.submit .spacer a,
+.sidebox.create .spacer a,
+.morelink .nub,
+.morelink .nub:hover { display: none }
+
+.sidecontentbox a.helplink {
+    position: absolute;
+
+    top: $announcements-space + 50px;
+}
