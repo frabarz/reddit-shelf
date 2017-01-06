@@ -74,7 +74,7 @@
     text-transform: uppercase;
 
     color: #444;
-    background-color: #FFF;
+    background-color: mix($color-background, #fff, 50%);
 
     &,
     & a {
@@ -84,5 +84,5 @@
 
 .debuginfo {
     font-family: $font-verdana;
-	background: #fdfdfd;
+    background: mix($color-background, #fff, 60%);
 }

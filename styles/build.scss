@@ -8,7 +8,7 @@
 $ENV: "development" !default;
 // $ENV: "production";
 
-@import "dev_urls";
+@import "special_urls";
 
 // MIXINS
 @import "mixins";
@@ -17,6 +17,7 @@ $ENV: "development" !default;
 @import "basestyles";
 @import "module_buttons";
 @import "module_thing";
+@import "module_usertext";
 @import "module_raisedbox";
 @import "module_search";
 @import "module_flairselector";
@@ -46,3 +47,18 @@ $ENV: "development" !default;
 
 // ANIMATION KEYFRAMES
 @import "keyframes";
+
+a[href^="#nsd"],
+a[href$="#sprite"],
+a[href$="#evidence"],
+a[href="#countdown"] {
+    pointer-events: none;
+    color: inherit;
+    cursor: text;
+}
+
+@import "special_flairs";
+@import "special_trials";
+// @import "special_miraikikan";
+@import "special_rolelayer";
+@import "special_replymenu";

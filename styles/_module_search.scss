@@ -5,7 +5,7 @@
         line-height: 18px;
         font-family: inherit;
 
-        border: 1px solid $color-sideborders;
+        border: 1px solid $color-border;
         background: $color-searchinput;
 
         &:focus {
@@ -19,10 +19,10 @@
         width: 32px;
 
         border: none;
-        border-left: 1px solid $color-sideborders;
+        border-left: 1px solid $color-border;
 
         &:hover {
-            background-color: rgba(158,158,158,.2);
+            background-color: rgba(#999, .2);
         }
     }
 }
@@ -38,7 +38,7 @@
 
     color: #37474F;
     background: $color-searchexpando;
-    border: 1px solid $color-sideborders;
+    border: 1px solid $color-border;
     border-top: 0 none;
     border-radius: 0;
 
@@ -67,7 +67,7 @@
     &::before {
         margin-left: -1 * $arrow-size - 2px;
         border-width: $arrow-size + 2;
-        border-bottom-color: $color-sideborders;
+        border-bottom-color: $color-border;
     }
 
     label {
@@ -91,6 +91,31 @@
         padding: 0 10px 1em;
         font-size: 0.8em;
     }
+
+    /* PATCH FOR RES */
+    /* Style for the added options */
+    .side & {
+        br {
+            display: none;
+
+            ~ label {
+                float: left;
+                padding-top: 0;
+                box-sizing: border-box;
+                width: 50%;
+
+                select {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+
+        #moresearchinfo {
+            clear: left;
+        }
+    }
+
 }
 
 .combined-search-page .searchpane {

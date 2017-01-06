@@ -3,8 +3,9 @@ $gradient-watercolor2: linear-gradient(to right bottom, rgba(pink, 0.3), transpa
 
 #header {
     border: none;
-    background: #fff center/cover;
-    background-image: $gradient-watercolor1, $gradient-watercolor2, $url-papertexture;
+    // background: #fff center/cover;
+    // background-image: $gradient-watercolor1, $gradient-watercolor2;
+    background: $color-headerbg $url-logotransparent center/cover;
     margin-bottom: 13px;
 }
 

@@ -3,29 +3,35 @@
         display: none;
     }
 
-    #header {
+    #header-bottom-left {
         li:not(.selected) {
             display: none;
         }
     }
 
     > .content > span:first-child {
-        position: absolute;
-        top: $header-height + 30px;
-        left: 500px;
-        z-index: 6000;
-
         display: block;
+        margin: 0 $sidebar-margin 0 0;
+        padding: 10px 14px;
 
-        @media (max-width: 980px) {
-            position: static;
-            margin: 0 $sidebar-margin -1px 0;
-            padding: 10px 14px;
+        text-align: center;
 
-            text-align: center;
+        background: mix($color-highlight, #fff, 10%);
+        border-top: 1px solid $color-border;
+        border-right: 1px solid $color-border;
 
-            background: mix($color-highlight, #fff, 10%);
-            border: 1px solid #ccc;
+        @media (min-width: 980px) {
+            position: absolute;
+            top: $header-height + 30px;
+            left: 500px;
+            z-index: 6000;
+
+            padding: 0;
+            white-space: nowrap;
+
+            color: #fff;
+            background: transparent;
+            border: 0 none;
         }
     }
 
@@ -40,6 +46,11 @@
         }
     }
 
+    .pageactions,
+    .pageactions .wikiaction {
+        border-radius: 0;
+    }
+
     .pageactions {
         @media (max-width: 980px) {
             display: inline-block;
@@ -52,8 +63,8 @@
         padding: 10px 14px;
 
         background: #fff;
-        border: 1px solid #ccc;
-        box-shadow: -37px 0 0 -1px #eee, -36px 0 0 0 #ccc;
+        border: 1px solid $color-border;
+        box-shadow: -37px 0 0 -1px #eee, -36px 0 0 0 $color-border;
 
         .sitetable {
             margin: 0;
@@ -75,7 +86,7 @@
         > ul {
             padding: 10px 14px;
             background: mix($color-highlight, #fff, 10%);
-            border-color: #ccc;
+            border-color: $color-border;
 
             @media (max-width: 980px) {
                 margin: 0 0 15px;
@@ -125,6 +136,6 @@
         padding: 10px 14px;
 
         background: mix($color-highlight, #fff, 10%);
-        border-top: 1px solid #ccc;
+        border-top: 1px solid $color-border;
     }
 }

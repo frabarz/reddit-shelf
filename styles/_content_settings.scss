@@ -34,20 +34,35 @@
             margin-left: 210px;
         }
 
+        .delete-field,
+        ul {
+            margin-bottom: 10px;
+        }
+
+        .delete-field {
+            td {
+                vertical-align: middle;
+            }
+
+            li,
+            td {
+                padding: 2px 0;
+            }
+        }
+
         .usertext-edit {
             margin: 0;
             width: auto;
+        }
 
-            input,
-            textarea {
-                display: block;
-                width: 100%;
-                box-sizing: border-box;
-            }
+        input[type="text"] {
+            width: 100%;
+        }
 
-            textarea {
-                min-height: 200px;
-            }
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin: 0 10px 0 0;
+            vertical-align: middle;
         }
     }
 

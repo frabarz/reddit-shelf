@@ -37,27 +37,21 @@
     .login-form {
         background: #c3cfd6;
         border-width: 1px 0;
-        border-color: rgba(#000, 0.1);
+        border-color: $color-sideborders;
     }
 
     .titlebox .bottom {
         margin-top: 25px;
         margin-bottom: 25px;
         padding: 0 10px;
-
-        background: rgba(0,0,0,.05);
-        border-top: 1px solid rgba(0,0,0,.1);
-        border-bottom: 1px solid rgba(0,0,0,.1);
         height: 22px;
+
         line-height: 22px;
+        letter-spacing: -0.2px;
 
-        .age {
-            letter-spacing: -1px;
-        }
-
-        time {
-            letter-spacing: 0;
-        }
+        background: rgba(#000, 0.05);
+        border: 0 solid $color-sideborders;
+        border-width: 1px 0;
 
         .flair {
             display: none;

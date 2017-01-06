@@ -11,7 +11,7 @@
     text-align: right;
 
     color: #000;
-    background: $color-pinkblood;
+    background: $color-headerbar;
     border-radius: 0;
 
     @include material-shadow(1);
@@ -22,25 +22,28 @@
     > form {
         position: static;
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: top;
     }
 
     .loggedin & .user {
-        display: block;
-        margin-bottom: 10px;
+        position: absolute;
+        right: 5px;
 
-        font-size: 10px;
-        line-height: 10px;
-        text-align: right;
+        margin-top: -35px;
+        padding: 0 10px;
 
-        color: #fff;
+        line-height: 30px;
+        font-size: 20px;
+
+        background: #fff;
+        border-radius: 20px;
+        @include material-shadow(1);
 
         a {
             display: inline-block;
-            font-size: 20px;
-            line-height: 20px;
-
             vertical-align: top;
+            line-height: 30px;
+            font-size: 20px;
         }
     }
 
@@ -51,4 +54,11 @@
     .pref-lang {
         font-weight: normal
     }
+}
+
+/* PATCH FOR RES */
+
+/* Hides the button to toggle the bar, since we are using it for CSS */
+#userbarToggle {
+    display: none !important;
 }

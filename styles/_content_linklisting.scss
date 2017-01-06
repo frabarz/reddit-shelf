@@ -7,23 +7,30 @@
     margin-right: $sidebar-margin;
 }
 
+.link,
+.nav-buttons,
+.NERPageMarker {
+    background: $color-bgthing 100.2% -1px no-repeat;
+    border-width: 1px 1px 1px 0;
+    border-color: $color-border !important;
+    border-style: solid !important;
+    border-radius: 0 !important;
+}
+
+
+
 .link {
     position: relative;
 
     margin-bottom: 8px;
     padding: 1px 0;
 
-    background: #fff 100.2% -1px no-repeat;
-    border-width: 1px 1px 1px 0;
-    border-color: rgba(#000, 0.2) !important;
-    border-style: solid !important;
-
     &.stickied {
-        background-color: mix(#fff, #090, 90%);
+        background-color: mix($color-bgthing, #090, 90%);
     }
 
     &.last-clicked {
-        background-color: mix(#fff, #09f, 85%);
+        background-color: mix($color-bgthing, #09f, 85%);
     }
 
     // &:first-of-type { border-top: 0; }
@@ -55,17 +62,20 @@
         left: 0;
 
         margin: 0;
-        min-width: $width-score;
+        width: $width-score;
+        max-width: $width-score;
 
-        background: #fff;
-        border-right: 1px solid rgba(#000, 0.2);
+        border-right: 1px solid $color-border;
 
         .subscriber & {
-            min-width: $width-arrow + 1px + $width-score;
+            width: $width-arrow + 1px + $width-score;
+            max-width: $width-arrow + 1px + $width-score;
         }
 
         .comments-page.subscriber & {
-            min-width: $width-arrow;
+            width: $width-arrow;
+            max-width: $width-arrow;
+            background: rgba(#000, 0.1);
         }
     }
 
@@ -73,7 +83,7 @@
         margin: 0;
         width: $width-arrow;
 
-        background: #eee $url-arrows no-repeat;
+        background: rgba(mix($color-bgthing, #000, 10%), 0.2) $url-arrows no-repeat;
 
         &.up,
         &.upmod,
@@ -85,7 +95,7 @@
             height: 50%;
 
             &:hover {
-                background-color: rgba(#fff, 0.1);
+                background-color: rgba($color-bgthing, 0.1);
             }
 
             .subscriber & {
@@ -98,7 +108,7 @@
             top: 0;
 
             .subscriber & {
-                border-bottom: 1px solid rgba(#000, 0.2);
+                border-bottom: 1px solid rgba($color-border, 0.1);
             }
 
             .comments-page & {
@@ -114,26 +124,32 @@
                 top: 92px;
                 bottom: auto;
                 height: 60px;
-                border-bottom: 1px solid rgba(#000, 0.2);
+                border-bottom: 1px solid $color-border;
             }
         }
 
         &.up {
             background-position: -50px center;
-            opacity: .4;
         }
         &.upmod {
-            background-color: rgba(mix(#fff, $color-upvote, 30%), 0.2);
+            background-color: rgba(mix($color-bgthing, $color-upvote, 30%), 0.2);
             background-position: -150px center;
         }
 
         &.down {
             background-position: 0 center;
-            opacity: .4;
         }
         &.downmod {
-            background-color: rgba(mix(#fff, $color-downvote, 30%), 0.2);
+            background-color: rgba(mix($color-bgthing, $color-downvote, 30%), 0.2);
             background-position: -100px center;
+        }
+    }
+
+    .midcol.likes,
+    .midcol.dislikes {
+        .arrow.up,
+        .arrow.down {
+            background-color: rgba(#000, 0.1);
         }
     }
 
@@ -147,8 +163,8 @@
         width: $width-score;
 
         color: #7b8b9d;
-        background: #fff;
-        border: 0 solid rgba(#000, 0.2);
+        background: rgba(#000, 0.1);
+        border: 0 solid $color-border;
 
         .subscriber & {
             left: $width-arrow;
@@ -168,10 +184,10 @@
         }
 
         &.likes {
-            background: rgba(mix(#fff, $color-upvote, 30%), 0.2);
+            background: rgba(mix($color-bgthing, $color-upvote, 30%), 0.2);
         }
         &.dislikes {
-            background: rgba(mix(#fff, $color-downvote, 30%), 0.3);
+            background: rgba(mix($color-bgthing, $color-downvote, 30%), 0.3);
         }
     }
 
@@ -184,14 +200,14 @@
     .expando-button {
         position: absolute;
         bottom: 0;
-        left: 1px;
+        left: 0;
 
         margin: 0;
         min-width: 36px !important;
         min-height: 30px !important;
 
         cursor: pointer;
-        border-top: 1px solid rgba(0,0,0,.1);
+        border-top: 1px solid $color-border;
         background-image: $url-assets !important;
 
         .subscriber & {
@@ -203,7 +219,7 @@
         }
 
         &.collapsed {
-            background: rgba(0,0,0,.02) no-repeat;
+            background: rgba(#000, 0.05) no-repeat;
 
             &.selftext {
                 background-position: -140px -202px;
@@ -241,7 +257,7 @@
 
         &.expanded {
             margin-bottom: 0!important;
-            background: rgba(0,0,0,.02) -25px -95px no-repeat;
+            background: rgba(#000, 0.15) -25px -95px no-repeat;
 
             &:hover {
                 background-position: -71px -95px;
@@ -250,7 +266,7 @@
     }
 
     &:hover .expando-button.collapsed {
-        background-color: rgba(0,0,0,.04)!important;
+        background-color: rgba(#000, 0.1) !important;
     }
 
 
@@ -282,7 +298,7 @@
         text-transform: uppercase;
 
         color: #fff;
-        background: rgba(0,0,0,.3);
+        background: rgba(#000, 0.3);
         border: 0 none;
     }
 
@@ -305,6 +321,7 @@
     .tagline {
         margin: 5px 0 0;
 
+        line-height: 26px;
         font-size: 13px;
 
         .edited-timestamp {
@@ -370,22 +387,6 @@
         margin-top: 74px;
     }
 
-    .nsfw-stamp acronym {
-        background: #fff;
-        border-radius: 0;
-        border: 1px solid #e74c3c;
-        color: #c0392b;
-        padding: 0 4px
-    }
-
-    .give-gold {
-        color: #988143!important
-    }
-
-    .stamp {
-        border: 0!important
-    }
-
     .expando {
         margin: 0 -14px;
 
@@ -396,7 +397,7 @@
 
         .listing-page & {
             background: rgba(#fff, 0.7);
-            border-top: 1px dashed rgba(#000, 0.2);
+            border-top: 1px dashed $color-border;
 
             > form {
                 max-height: 300px;
@@ -417,10 +418,6 @@
 }
 
 .nav-buttons {
-    background: #fff;
-    border: 1px solid rgba(#000, 0.2);
-    border-left: 0 none;
-
     .nextprev {
         display: block;
         margin: 0;
@@ -447,4 +444,14 @@
             color: #000;
         }
     }
+}
+
+/* RES patches */
+.link .entry,
+.link .entry .md-container {
+    background-color: transparent !important;
+}
+
+.sitetable > .sitetable {
+    margin-right: 0;
 }

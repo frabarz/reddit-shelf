@@ -11,7 +11,7 @@
     background: #FFF;
     border: none;
 
-    NIGHT & {
+    #{$NIGHT} & {
         background: #222;
     }
 }
@@ -52,10 +52,6 @@
             margin: 0 5px;
             visibility: visible
         }
-
-        /*.loggedin & >.separator:last-of-type {
-            margin: 0
-        }*/
     }
 
     .srdrop.dropdown {
@@ -74,14 +70,14 @@
             background: $dropdown-selected $url-assets no-repeat 6px 7px;
 
             &:hover {
-                background-color: darken($dropdown-selected, 20%);
+                background-color: darken($dropdown-selected, 10%);
             }
         }
     }
 
     .srdrop.drop-choices {
         margin: 0;
-        /*padding: 5px;*/
+
         border: solid $dropdown-selected;
         border-width: 0 4px;
 

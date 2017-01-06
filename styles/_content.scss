@@ -48,19 +48,28 @@ body > .content {
         position: relative;
         z-index: 1;
 
+        a,
+        a:visited {
+            color: $color-highlight;
+        }
+
         h1 {
             margin-left: -14px;
             padding-top: 10px;
             padding-left: 14px;
 
-            border-top: 1px solid rgba(#000, 0.1);
+            border-top: 1px solid $color-border;
         }
 
         hr {
             margin-left: -14px;
             height: 1px;
 
-            background: rgba(#000, 0.2);
+            background: $color-border;
+        }
+
+        li > p {
+            margin: 0;
         }
 
         sup > sup > a {
