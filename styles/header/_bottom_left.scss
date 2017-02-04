@@ -1,0 +1,108 @@
+#header-img-a {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 16px;
+    width: 42px;
+    height: 40px;
+    margin: 2px;
+}
+
+#header-img {
+    display: block;
+    width: auto;
+    height: 100%;
+
+    &.default-header {
+        display: none;
+    }
+}
+
+#header-bottom-left {
+    height: $header-height;
+
+    .pagename {
+        overflow: hidden;
+        display: block;
+        margin: 0 15px;
+
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+
+        line-height: 67px;
+        font-size: 20px;
+        white-space: nowrap;
+
+        color: #fff;
+
+        a {
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: top;
+
+            width: 396px;
+            height: 65px;
+
+            font-size: 13px;
+            text-indent: -300px;
+
+            color: #fff;
+            background: $url-logosolid no-repeat center top/#{contain};
+        }
+    }
+
+    .tabmenu {
+        position: absolute;
+        bottom: 0;
+
+        margin: 0 0 0 420px;
+        height: 35px;
+
+        li {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0;
+
+            a {
+                display: block;
+                padding: 0 10px;
+
+                font-size: 12px;
+                line-height: 35px;
+                font-weight: normal;
+                text-transform: uppercase;
+
+                color: #fff;
+                background: transparent;
+
+                &:hover {
+                    background: mix($color-headerbar, #fff, 80%);
+                }
+            }
+
+            &.selected a {
+                border: none;
+                color: #292929;
+                background: #fff;
+            }
+        }
+
+        [href*="/controversial"],
+        [href*="/gilded"],
+        [href*="/ads"] {
+            display: none;
+        }
+
+        [href*="/wiki"] {
+            margin-left: 10px;
+            font-weight: bold;
+        }
+    }
+}
+
+/* RES */
+.res-tabmenu-button.res-toggle-filterline-visibility a::before {
+    display: block;
+}

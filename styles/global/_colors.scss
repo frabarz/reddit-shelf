@@ -1,0 +1,30 @@
+$color-upvote: #FF8b60;
+$color-downvote: #9494FF;
+$color-pinkblood: #de007b;
+
+$color-bluegray: #607D8B;
+
+$color-a: #ff9900;
+$color-b: #424242;
+$color-c: #e9e9e9;
+$color-d: #bcbcbc;
+$color-e: #3299bb;
+
+$color-background: mix($color-bluegray, #fff, 20%);
+$color-border: rgba(#000, .3);
+
+$color-headerbg: #145D85;
+$color-headerbar: rgba($color-headerbg, .2);
+
+$color-bgthing: #fff;
+$color-searchinput: #ECEFF1;
+$color-searchexpando: mix($color-bluegray, #fff, 80%);
+
+$color-sideheaderbg: mix($color-bluegray, #fff, 50%);
+
+$color-sideborders: $color-border;
+
+$color-linksticky: #2E6E02;
+$color-linkpromoted: #c90;
+
+$color-highlight: #224B7D;

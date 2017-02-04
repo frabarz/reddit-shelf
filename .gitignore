@@ -1,6 +1,9 @@
 public/
 images/
 resources/
+node_modules/
+
+yarn.lock
 
 *.html
 *.json

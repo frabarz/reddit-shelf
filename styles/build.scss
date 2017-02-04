@@ -1,64 +1,59 @@
-// VARIABLES
-@import "var_urls";
-@import "var_colors";
-@import "var_fonts";
-@import "var_sizes";
-
 // Development environment
 $ENV: "development" !default;
 // $ENV: "production";
 
-@import "special_urls";
+// GLOBAL VARIABLES
+@import "global/urls";
+@import "global/colors";
+@import "global/fonts";
+@import "global/sizes";
+@import "global/mixins";
 
-// MIXINS
-@import "mixins";
+// SPECIFIC VARIABLES
+@import "drrp/urls";
 
-// COMMON STYLES
-@import "basestyles";
-@import "module_buttons";
-@import "module_thing";
-@import "module_usertext";
-@import "module_raisedbox";
-@import "module_search";
-@import "module_flairselector";
+// COMMON ELEMENTS & MODULES
+@import "modules/keyframes";
+@import "modules/rootelements";
+@import "modules/buttons";
+@import "modules/thing";
+@import "modules/usertext";
+@import "modules/raisedbox";
+@import "modules/search";
+@import "modules/flairselector";
+@import "modules/thumbnail";
+@import "modules/linefield";
 
 // HEADER
-@import "header";
-    @import "header_suscriptions";
-    @import "header_bottom_left";
-    @import "header_bottom_right";
+@import "header/skeleton";
+@import "header/suscriptions";
+@import "header/bottom_left";
+@import "header/bottom_right";
 
 // CONTENT
-@import "content";
-    @import "content_linklisting";
-    @import "content_comment";
-    @import "content_settings";
-    @import "wiki";
+@import "content/skeleton";
+@import "content/linklisting";
+@import "content/comments";
+@import "content/pagesearch";
+@import "content/pagesettings";
+@import "content/pagesubmit";
+@import "content/pagestylesheet";
+@import "content/wiki";
 
 // SIDEBAR
-@import "side";
-    @import "side_submit";
-    @import "side_titlebox";
-    @import "side_content";
-    @import "side_announcement";
+@import "sidebar/skeleton";
+@import "sidebar/submit";
+@import "sidebar/titlebox";
+@import "sidebar/content";
+@import "sidebar/announcements";
 
 // FOOTER
 @import "footer";
 
-// ANIMATION KEYFRAMES
-@import "keyframes";
-
-a[href^="#nsd"],
-a[href$="#sprite"],
-a[href$="#evidence"],
-a[href="#countdown"] {
-    pointer-events: none;
-    color: inherit;
-    cursor: text;
-}
-
-@import "special_flairs";
-@import "special_trials";
-// @import "special_miraikikan";
-@import "special_rolelayer";
-@import "special_replymenu";
+// SPECIFIC CODE
+@import "drrp/sidebar";
+@import "drrp/flairs";
+@import "drrp/trials";
+// @import "drrp/miraikikan";
+@import "drrp/rolelayer";
+@import "drrp/replymenu";

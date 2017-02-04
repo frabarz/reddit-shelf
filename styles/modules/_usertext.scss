@@ -1,0 +1,121 @@
+.usertext {
+    .md {
+        margin: 0;
+
+        .thing & {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .usertext-body {
+        margin: 0;
+        padding: 10px 14px;
+
+        border: 0;
+        background: transparent !important;
+    }
+
+    .usertext-edit {
+        display: flex;
+        flex-direction: row;
+
+        margin: 0;
+        padding: 0;
+
+        width: auto !important;
+        max-width: initial;
+
+        /* RES: fix markdown toolbar position */
+        body.res & {
+            position: relative;
+            padding-top: 60px;
+
+            .markdownEditor-wrapper {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+            }
+
+            .markhelp[style="display: none;"] + .livePreview {
+                display: none;
+            }
+        }
+
+        .md {
+            flex: 1 1 auto;
+
+            min-width: 300px;
+
+            textarea {
+                margin: 0;
+                height: 100% !important;
+                width: 100% !important;
+
+                min-height: 260px;
+
+                border: 1px solid $color-border;
+            }
+        }
+
+        .bottom-area {
+            overflow: visible;
+
+            flex: 0 0 auto;
+
+            display: flex;
+            flex-direction: column;
+
+            margin: 6px;
+            width: 140px;
+        }
+
+        .markhelp {
+            flex: 0 1 auto;
+            margin: 0 0 0 20px;
+            padding: 0 10px;
+            width: 40%;
+
+            border: 0 dotted #c0c0c0;
+            border-width: 0 0 0 1px;
+        }
+
+        /* RES: Fix markdown live preview position */
+        .livePreview {
+            flex: 0 0 40%;
+        }
+    }
+
+    .bottom-area {
+        .RESBigEditorPop {
+            margin: 0;
+        }
+
+        .usertext-buttons {
+            order: -1;
+            flex: 1 0 auto;
+        }
+
+        .help-toggle {
+            order: 9;
+        }
+
+        .reddiquette {
+            order: 10;
+        }
+    }
+
+    .usertext-buttons button,
+    .usertext-buttons .status {
+        display: block;
+        margin: 0 0 6px;
+        width: 100%;
+    }
+
+    .help-toggle,
+    a.reddiquette {
+        margin-left: 0;
+        text-transform: uppercase;
+    }
+}

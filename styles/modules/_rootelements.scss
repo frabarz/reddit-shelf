@@ -1,0 +1,104 @@
+body {
+    position: relative;
+    min-width: 900px;
+    font-family: $font-arial;
+    background: $color-background;
+}
+
+::-moz-selection {
+    background-color: #0079d3;
+    text-shadow: none;
+    color: #fff
+}
+
+::selection {
+    background-color: #0079d3;
+    text-shadow: none;
+    color: #fff
+}
+
+:focus {
+    outline: 0!important
+}
+
+a,
+a:visited,
+a:target,
+html body *.visited {
+    color: inherit;
+}
+
+input,
+select,
+button,
+textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: inherit;
+    font-family: inherit;
+
+    color: #738491;
+    background: #fff;
+    border: 1px solid;
+    border-color: $color-border !important;
+    box-shadow: none !important;
+
+    transition: all .15s ease;
+
+    &:hover {
+        border-color: #738491 !important;
+    }
+
+    &:focus {
+        color: #292f34;
+        border-color: #24a0ed !important;
+    }
+}
+
+input {
+    padding: 0;
+    line-height: 1.4em;
+
+    box-shadow: none;
+
+    &[type=file] {
+        vertical-align: middle;
+        overflow: visible;
+
+        font-size: inherit !important;
+
+        border: 0 none;
+    }
+
+    &[type=checkbox],
+    &[type=radio] {
+        background: transparent;
+        border-width: 0;
+    }
+}
+
+textarea {
+    padding: 5px 10px;
+}
+
+select {
+    height: 2em;
+
+    border: 1px solid;
+}
+
+input[type=button],
+input[type=submit],
+button {
+    padding: .5em 1em;
+
+    border: 0 none;
+    border-radius: 2px;
+    @include material-shadow(1);
+}
+
+.rounded {
+    border-radius: 0;
+}

@@ -1,0 +1,125 @@
+@if ($announcements-space > 0) {
+
+// MAX NUMBER of announcement cards
+$k: 8;
+
+body > .content {
+    padding-top: (32px + $sidebar-cellpadding);
+}
+
+.side .md ul:first-of-type {
+    overflow: hidden;
+
+    position: absolute;
+    top: (25px + $header-height + 36px + $header-bottomspace);
+    left: 0;
+    right: $sidebar-margin;
+
+    margin: 0;
+    padding: 0;
+    height: 30px;
+
+    font-size: 16px;
+    white-space: nowrap;
+
+    color: #000;
+    background: $color-searchinput;
+    border: 0 solid $color-border;
+    border-width: 1px 1px 1px 0;
+
+    list-style: none;
+
+    li {
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        display: block;
+        padding: 0;
+
+        line-height: 30px;
+
+        opacity: 0;
+
+        counter-increment: announce;
+
+        &::before {
+            content: counter(announce);
+            display: block;
+            float: left;
+            font-size: 50px;
+            line-height: 30px;
+            opacity: 0.2;
+        }
+
+        &:first-child:last-child {
+            opacity: 1;
+        }
+
+        @for $m from 2 through $k {
+            @for $n from 1 through $m {
+                &:nth-child(#{$n}):nth-last-child(#{$m + 1 - $n}) {
+                    animation: newsticker-#{$m} #{5 * $m}s #{5 * ($n - 1)}s infinite forwards;
+                }
+            }
+
+            @keyframes newsticker-#{$m} {
+                0%   {
+                    opacity: 0;
+                    transform: translateX(30px);
+                    z-index: -1;
+                    }
+                2%   {
+                    opacity: 1;
+                    transform: translateX(0);
+                    z-index: ($m * 10);
+                    }
+                #{100% / $m - 1} {
+                    opacity: 1;
+                    transform: translateX(0);
+                    z-index: ($m * 10);
+                    }
+                #{100% / $m + 1}  {
+                    opacity: 0;
+                    transform: translateX(-30px);
+                    z-index: -1;
+                    }
+                #{100% / $m + 2}  {
+                    opacity: 0;
+                    transform: translateX(0);
+                    z-index: -1;
+                    }
+            }
+        }
+    }
+
+    &:hover li,
+    li:hover {
+        animation-play-state: paused !important;
+    }
+
+    strong:first-of-type {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 0.2em;
+        max-width: 75%;
+
+        letter-spacing: -4px;
+        font-size: 42px;
+        font-weight: normal;
+        font-style: italic;
+        font-family: $font-verdana;
+
+        color: $color-headerbg;
+
+        transition: max-width 0.15s ease;
+        pointer-events: none;
+    }
+
+    &:hover strong:first-of-type {
+        max-width: 1%;
+        opacity: 0.1;
+    }
+}
+
+}

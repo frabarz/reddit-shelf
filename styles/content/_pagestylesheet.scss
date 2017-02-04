@@ -1,0 +1,39 @@
+.stylesheet-customize-container {
+    margin-right: $sidebar-margin;
+
+    h2 {
+        margin: 0 0 10px;
+        line-height: 26px;
+        font-size: 20px;
+        color: $color-highlight;
+    }
+
+    .sheets,
+    .sheets .col > div {
+        margin: 0;
+    }
+
+    .sheets .btn.right {
+        line-height: 24px;
+    }
+
+    #preview-table > table {
+        display: block;
+        margin: 0;
+        width: auto;
+        background: $color-background;
+        border: 0 none;
+    }
+
+    ul.image-preview-list {
+        margin: 10px 0;
+
+        li {
+            margin: 2px;
+            padding: 8px;
+            width: 300px - 16px;
+
+            background: mix(#000, #fff, 10%);
+        }
+    }
+}

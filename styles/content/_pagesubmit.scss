@@ -1,0 +1,154 @@
+.submit-page {
+    $rules-width: 380px;
+
+    .spacer:empty,
+    .usertext-edit .usertext-buttons {
+        display: none;
+    }
+
+    form.submit {
+        margin: 0 $sidebar-margin 0 0;
+    }
+
+    .content > h1 {
+        float: left;
+        margin: 6px 0 0 (36px + 14px);
+
+        line-height: 33px;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+
+    .tabmenu {
+        margin: 13px 0 10px 36px;
+        padding: 4px;
+
+        background: #fff;
+        border: 1px solid $color-border;
+        box-shadow: -37px 0 0 -1px #ddd, -36px 0 0 $color-border;
+
+        @include clearfix(left);
+
+        li {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        a {
+            display: block;
+            padding: 0 1em;
+
+            line-height: 32px;
+            font-size: 20px !important;
+
+            border: 1px solid $color-border !important;
+        }
+    }
+
+    .formtabs-content {
+        position: relative;
+        clear: left;
+
+        padding: 0 ($rules-width + 10px) 0 0;
+        width: auto;
+
+        border: 0 none;
+
+        .spacer {
+            margin-top: 0;
+        }
+    }
+
+    .spacer {
+        .submit_text {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            margin: 0;
+            width: $rules-width - 28px;
+            max-height: initial;
+
+            box-shadow: none;
+
+            ol, ul {
+                margin: 0;
+            }
+        }
+
+        .btn {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+
+            font-size: 13px;
+        }
+    }
+
+    .title,
+    .linefield-description,
+    .roundfield-description {
+        width: 140px;
+    }
+
+    .linefield .linefield-content,
+    .roundfield .roundfield-content {
+        margin-left: 150px;
+    }
+
+    .usertext-edit {
+        flex-direction: column;
+
+        .bottom-area {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            margin: 6px 0;
+            width: auto;
+        }
+
+        .markhelp {
+            margin: 10px 0 0;
+            padding: 10px 0;
+            width: auto;
+            border-width: 1px 0 0;
+        }
+    }
+
+    #sr-autocomplete-area {
+        min-height: 42px;
+    }
+
+    #suggested-reddits {
+        h3 {
+            float: left;
+            margin-top: 0;
+            margin-left: -150px;
+            width: 140px;
+        }
+
+        li {
+            margin: 2px;
+
+            a {
+                display: block;
+                padding: .5em 1em;
+
+                background: #ccc;
+
+                &:hover {
+                    background: mix(#ccc, $color-highlight, 50%);
+                }
+            }
+        }
+    }
+
+    #items-required {
+        margin-left: 38px;
+    }
+
+    .info-notice {
+        margin-right: $rules-width + 10px;
+    }
+}

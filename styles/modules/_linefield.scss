@@ -1,0 +1,59 @@
+/* The page renders the selector depending on the user type:
+ * - Normal users: .roundfield
+ * - Mods: .linefield
+ */
+
+.linefield,
+.roundfield {
+    &,
+    &.mobile {
+        overflow: hidden;
+        width: auto;
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: 300;
+
+        color: $color-bluegray;
+    }
+
+    .usertext-edit {
+        margin: 0;
+        width: auto;
+        max-width: initial;
+    }
+
+    textarea,
+    select,
+    input[type="text"],
+    input[type="url"],
+    input[type="password"],
+    input[type="number"],  {
+        width: 100% !important;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+    }
+}
+
+.linefield .title,
+.roundfield .title,
+.linefield .linefield-description,
+.roundfield .roundfield-description {
+    float: left;
+    clear: left;
+
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+
+.linefield .linefield-content,
+.roundfield .roundfield-content {
+    margin: 0 0 0 210px;
+    padding: 0;
+}

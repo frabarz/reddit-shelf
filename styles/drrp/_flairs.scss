@@ -1,0 +1,231 @@
+.flair {
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	margin-right: 4px;
+
+	/* Defaults to a blue blob */
+	width: 19px;
+	height: 28px;
+	background-position: -62px -79px;
+
+	font-size: 0 !important;
+
+	color: transparent;
+	background: $url-flairs no-repeat;
+	border: 0 none;
+
+	&::after {
+		content: attr(title);
+
+		position: absolute;
+		bottom: 22px;
+		left: 100%;
+
+		overflow: hidden;
+		width: 60px;
+		max-height: 16px;
+
+		line-height: 7px;
+		font-size: 8px;
+		font-family: $font-segoe;
+		font-weight: 400;
+		font-style: normal;
+		text-transform: uppercase;
+
+		color: #000;
+
+		.titlebox & {
+			left: auto;
+			right: 100%;
+		}
+	}
+
+	.side & {
+		vertical-align: middle;
+	}
+}
+
+@mixin flair($name, $w, $h, $bgx, $bgy) {
+	.flair-#{$name} {
+		width: $w + 0px;
+		height: $h + 0px;
+		background-position: ($bgx * -1px) ($bgy * -1px);
+	}
+}
+
+@include flair("adult_female", 20, 30, 61, 1006);
+@include flair("adult_male", 19, 28, 62, 79);
+@include flair("akane", 24, 30, 176, 393);
+// @include flair("akane_despair", 24, 30, 176, 433);
+@include flair("akane_kibougamine", 24, 30, 139, 658);
+@include flair("alterego", 23, 29, 62, 40);
+@include flair("aoi", 17, 35, 120, 814);
+@include flair("aoi_miraikikan", 22, 32, 58, 272);
+@include flair("aoi_swimsuit", 17, 35, 120, 1037);
+@include flair("betateru", 23, 28, 91, 122);
+@include flair("byakuya", 22, 29, 177, 199);
+@include flair("celes", 33, 32, 133, 373);
+@include flair("celes_castle", 17, 31, 151, 0);
+@include flair("chiaki", 25, 28, 175, 123);
+@include flair("chiaki_kibougamine", 25, 28, 171, 161);
+@include flair("chihiro", 23, 29, 61, 354);
+// @include flair("chisa_alt", 22, 33, 29, 1003);
+@include flair("chisa_dr3", 21, 31, 178, 0);
+@include flair("chisa_kibougamine", 21, 31, 60, 117);
+@include flair("chisa_miraikikan", 19, 28, 31, 117);
+@include flair("council_aiko", 23, 30, 62, 0);
+@include flair("council_asuka", 19, 28, 0, 306);
+@include flair("council_karen", 19, 28, 104, 393);
+@include flair("council_kiriko", 17, 27, 0, 77);
+@include flair("council_kotomi", 19, 29, 0, 771);
+@include flair("council_ryouta", 19, 28, 0, 614);
+@include flair("council_shouji", 25, 35, 66, 635);
+@include flair("council_shousuke", 18, 28, 89, 930);
+@include flair("council_soushun", 23, 28, 58, 158);
+@include flair("council_suzuko", 25, 27, 175, 473);
+@include flair("council_taiki2", 18, 32, 66, 762);
+@include flair("council_taiki", 19, 30, 61, 314);
+@include flair("council_tarou", 20, 32, 147, 207);
+@include flair("council_tomohiko", 20, 28, 104, 505);
+@include flair("council_tsubasa", 21, 28, 0, 153);
+@include flair("daisaku", 23, 31, 95, 42);
+// @include flair("daisaku_alt", 19, 31, 32, 316);
+@include flair("daiya", 17, 32, 95, 0);
+@include flair("fuyuhiko", 17, 28, 0, 39);
+// @include flair("fuyuhiko_despair", 19, 29, 62, 881);
+@include flair("fuyuhiko_kibougamine", 17, 28, 31, 155);
+@include flair("fuyuhiko_patch", 17, 28, 180, 816);
+@include flair("fuyuhiko_yakuza", 24, 30, 139, 698);
+@include flair("genocider", 24, 28, 175, 41);
+// @include flair("gozu_alt", 17, 31, 31, 235);
+@include flair("gozu_dr3", 23, 34, 29, 799);
+@include flair("grandbois", 27, 27, 173, 665);
+@include flair("gundham", 17, 32, 31, 193);
+// @include flair("gundham_despair", 24, 36, 120, 859);
+@include flair("gundham_kibougamine", 19, 28, 0, 652);
+@include flair("haiji", 29, 28, 170, 778);
+@include flair("hajime", 19, 32, 122, 0);
+@include flair("hajime_kamukura", 26, 30, 33, 476);
+@include flair("hajime_reserve", 19, 32, 148, 249);
+@include flair("hajime_saiyan", 19, 32, 117, 291);
+@include flair("hifumi", 25, 28, 69, 597);
+@include flair("hiroko", 22, 28, 58, 196);
+@include flair("hiyoko", 27, 29, 29, 760);
+// @include flair("hiyoko_despair", 24, 29, 94, 354);
+@include flair("hiyoko_kibougamine", 24, 31, 69, 516);
+@include flair("hiyoko_kibougaminegrown", 21, 29, 31, 78);
+@include flair("ibuki", 25, 29, 27, 0);
+// @include flair("ibuki_despair", 25, 29, 27, 39);
+@include flair("ibuki_kibougamine", 25, 29, 91, 83);
+@include flair("imposter", 23, 28, 0, 499);
+@include flair("imposter_ryouta", 21, 28, 0, 191);
+@include flair("imposter_ryoutakibougamine", 19, 28, 139, 738);
+@include flair("imposter_togami", 22, 28, 58, 234);
+@include flair("imposter_togamidespair", 22, 28, 177, 238);
+@include flair("ishida", 17, 29, 0, 0);
+@include flair("izuru", 26, 30, 137, 496);
+// @include flair("izuru_smoothed", 25, 30, 170, 738);
+@include flair("jatarou", 19, 28, 62, 843);
+@include flair("jin", 17, 30, 29, 276);
+@include flair("junko", 37, 30, 128, 42);
+@include flair("junku", 37, 30, 124, 127);
+@include flair("juuzo", 19, 28, 0, 849);
+@include flair("juuzo_miraikikan", 23, 28, 33, 516);
+// @include flair("juuzou_alt", 19, 30, 0, 926);
+@include flair("kamishiro", 15, 29, 0, 267);
+@include flair("kazuichi", 19, 28, 154, 854);
+// @include flair("kazuichi_despair", 21, 32, 117, 249);
+@include flair("kazuichi_kibougamine", 22, 28, 177, 276);
+@include flair("kazuo", 17, 32, 91, 850);
+// @include flair("kazuo_alt", 17, 32, 62, 920);
+// @include flair("kenishiro", 27, 32, 66, 680);
+// @include flair("kirigiri_young", 23, 28, 137, 776);
+@include flair("kiyotaka", 17, 29, 32, 357);
+// @include flair("koichi_alt", 19, 28, 91, 892);
+@include flair("koichi_miraikikan", 21, 28, 0, 229);
+@include flair("komaru", 19, 32, 0, 1004);
+@include flair("komaru_school", 19, 29, 0, 887);
+@include flair("kotoko", 37, 35, 128, 82);
+@include flair("kurokuma", 23, 29, 31, 437);
+@include flair("kyouko", 24, 28, 105, 697);
+// @include flair("kyouko_miraikikan", 17, 28, 183, 933);
+@include flair("kyousuke", 17, 29, 0, 537);
+// @include flair("kyousuke_alt", 17, 29, 0, 810);
+@include flair("kyousuke_miraikikan", 17, 28, 91, 1006);
+@include flair("leon", 21, 32, 146, 291);
+// @include flair("leon_baseball", 21, 32, 139, 575);
+// @include flair("leon_baseballcut", 17, 28, 29, 1046);
+@include flair("madarai", 28, 29, 137, 457);
+@include flair("mahiru", 17, 27, 90, 202);
+// @include flair("mahiru_despair", 17, 27, 90, 317);
+// @include flair("mahiru_kibougamine", 17, 27, 180, 1009);
+@include flair("makoto", 21, 32, 120, 995);
+@include flair("makoto_miraikikan", 19, 31, 0, 730);
+@include flair("masaru", 25, 33, 69, 473);
+@include flair("mechamaru", 23, 32, 91, 160);
+// @include flair("miaya", 21, 28, 106, 543);
+// @include flair("miaya_alt", 21, 29, 0, 114);
+@include flair("miaya_dr3", 21, 27, 0, 462);
+// @include flair("miaya_standing", 19, 28, 0, 966);
+@include flair("mikan", 27, 28, 65, 435);
+// @include flair("mikan_despair", 27, 30, 69, 557);
+@include flair("mikan_kibougamine", 27, 28, 0, 576);
+@include flair("miku", 33, 30, 128, 333);
+@include flair("minimaru", 23, 29, 137, 536);
+@include flair("monaka", 21, 29, 176, 354);
+@include flair("monaka_dr3", 29, 32, 65, 393);
+@include flair("mondo", 17, 30, 90, 277);
+// @include flair("mondo_butter", 17, 30, 0, 690);
+// @include flair("mondo_diamond", 17, 30, 183, 893);
+// @include flair("mondo_pancake", 21, 28, 104, 621);
+@include flair("monokuma", 24, 26, 173, 702);
+// @include flair("monokuma_siren", 23, 27, 104, 431);
+@include flair("monokumakid_female", 19, 29, 154, 892);
+@include flair("monokumakid_male", 19, 29, 151, 969);
+@include flair("monomi", 24, 31, 139, 617);
+@include flair("mukuro", 19, 28, 180, 971);
+@include flair("mukuro_junko", 37, 30, 124, 167);
+@include flair("naegi_dad", 17, 30, 93, 1044);
+@include flair("naegi_mom", 17, 28, 180, 1046);
+@include flair("nagisa", 21, 29, 0, 423);
+@include flair("nagito", 27, 33, 29, 631);
+// @include flair("nagito_despair", 27, 33, 29, 674);
+@include flair("nagito_kibougamine", 27, 33, 29, 717);
+@include flair("natsumi", 15, 27, 95, 813);
+@include flair("nekomaru", 23, 30, 177, 314);
+// @include flair("nekomaru_despair", 23, 30, 106, 581);
+@include flair("nekomaru_kibougamine", 23, 30, 29, 843);
+@include flair("peko", 27, 28, 173, 587);
+// @include flair("peko_despair", 27, 30, 173, 625);
+@include flair("peko_kibougamine", 27, 28, 56, 1046);
+@include flair("ruruka", 15, 28, 90, 239);
+// @include flair("ruruka_alt", 19, 34, 120, 951);
+@include flair("ruruka_miraikikan", 17, 29, 183, 854);
+@include flair("ryouko", 23, 28, 147, 816);
+// @include flair("ryouta_alt", 19, 28, 151, 1008);
+@include flair("ryouta_miraikikan", 21, 28, 152, 931);
+@include flair("sakura", 32, 30, 95, 773);
+@include flair("santa", 17, 32, 62, 962);
+@include flair("sayaka", 21, 28, 89, 968);
+// @include flair("seiko_alt", 23, 28, 147, 1046);
+@include flair("seiko_miraikikan", 26, 28, 173, 510);
+@include flair("shirokuma", 23, 27, 104, 468);
+@include flair("sonia", 23, 30, 29, 924);
+// @include flair("sonia_despair", 25, 34, 175, 79);
+@include flair("sonia_kibougamine", 22, 28, 0, 385);
+@include flair("sonia_princess", 20, 31, 117, 207);
+@include flair("sounosuke", 19, 28, 0, 1046);
+// @include flair("sounosuke_alt", 21, 29, 29, 964);
+@include flair("sounosuke_miraikikan", 22, 29, 37, 592);
+@include flair("taichi", 25, 29, 170, 548);
+@include flair("teruteru", 22, 31, 0, 344);
+// @include flair("teruteru_despair", 22, 36, 120, 905);
+// @include flair("teruteru_fedora", 23, 31, 32, 396);
+@include flair("touko", 24, 28, 105, 735);
+// @include flair("touko_udg", 29, 30, 66, 722);
+@include flair("usami", 25, 28, 103, 659);
+@include flair("yasuhiro", 29, 32, 137, 415);
+@include flair("yasuke", 23, 31, 29, 883);
+@include flair("yui", 23, 29, 62, 804);
+@include flair("yuuta", 22, 28, 37, 554);

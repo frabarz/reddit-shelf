@@ -1,0 +1,148 @@
+.thing.comment .entry.rl-showdown {
+    $gradient-1: repeating-linear-gradient(0deg,
+        rgba(#fc0, 0) 0,   rgba(#fc0, 0) 5px,
+        rgba(#fc0, 0.2) 5px, rgba(#fc0, 0.2) 6px,
+        rgba(#fc0, 0) 6px, rgba(#fc0, 0) 20px
+        );
+    $gradient-2: repeating-linear-gradient(90deg,
+        rgba(#fc0, 0) 0,   rgba(#fc0, 0) 5px,
+        rgba(#fc0, 0.2) 5px, rgba(#fc0, 0.2) 6px,
+        rgba(#fc0, 0) 6px, rgba(#fc0, 0) 20px
+        );
+    $gradient-3: repeating-linear-gradient(45deg,
+        rgba(#fc0, 0) 0, rgba(#fc0, 0) 10px,
+        rgba(#fc0, 1) 10px, rgba(#fc0, 1) 20px
+        );
+
+    padding-left: 15px;
+
+    background: mix(#fff, #fc0, 90%) top left;
+    background-image: $gradient-1, $gradient-2;
+
+    .usertext-body {
+        position: relative;
+
+        background: transparent;
+
+        &::before {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            bottom: -30px;
+            left: -15px;
+
+            width: 15px;
+
+            background: $gradient-3 0 -20px;
+            background-attachment: fixed;
+        }
+    }
+}
+
+
+.rl-handbook {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9000;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 8px;
+    padding: 2px 0;
+    width: 300px;
+
+    color: #fff;
+    background: #000;
+    border-radius: 2px;
+
+    transform: translateX(400px);
+    transition: transform .2s ease-in;
+
+    .rl-handbook-header {
+        height: 20px;
+        flex: 0 0 auto;
+
+        text-transform: uppercase;
+        padding: .5em 10px;
+    }
+
+    .rl-handbook-content {
+        flex: 1 1 auto;
+
+        height: 90vh;
+        min-height: 300px;
+    }
+
+    &.visible {
+        transform: translateX(0);
+
+        .rl-handbook-content {}
+
+    }
+}
+
+.rl-sprite-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    .rl-sprite-radio,
+    .rl-sprite-attr {
+        display: none;
+    }
+
+    .rl-sprite-label {
+        flex: 0 0 auto;
+
+        padding: 4px 10px;
+
+        line-height: 16px;
+        font-size: 14px;
+
+        color: #fff;
+        background: #111;
+
+        cursor: pointer;
+    }
+
+    .rl-sprite-list {
+        flex: 0 0 0;
+        overflow: hidden;
+    }
+
+    .rl-sprite-radio:checked {
+
+        + .rl-sprite-label {
+            background: #333;
+
+            + .rl-sprite-attr {
+                display: block;
+                padding: 6px 10px;
+
+                line-height: 14px;
+                font-size: 10px;
+
+                color: #fff;
+
+                + .rl-sprite-list {
+                    flex: 1 1 auto;
+                    overflow: auto;
+                }
+            }
+        }
+    }
+
+    .rl-sprite {
+        display: inline-block;
+        margin: 2px;
+
+        width: calc(50% - 4px);
+        height: 120px;
+        // object-fit: cover;
+    }
+}

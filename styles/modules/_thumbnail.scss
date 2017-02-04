@@ -1,0 +1,52 @@
+.thing {
+    a.thumbnail {
+        display: block;
+        float: left;
+
+        margin: 10px 14px;
+        padding: 4px 4px 14px;
+
+        width: 60px;
+        height: 60px;
+
+        background: #fff;
+        @include material-shadow(1);
+
+        image-rendering: -moz-pixelated;
+        image-rendering: pixelated;
+
+        img {
+            display: block;
+
+            width: 60px;
+            height: 60px;
+
+            background: #000;
+            outline: 1px solid #ccc;
+        }
+
+        &.self,
+        &:empty {
+            display: none;
+        }
+
+        .listing-page &:not(.self) {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+
+            margin: auto 14px;
+
+            + .entry {
+                margin-left: 68px + 14px;
+            }
+        }
+    }
+
+    &:nth-child(2n+1)  a.thumbnail { transform: rotate(-8deg); }
+    &:nth-child(3n+2)  a.thumbnail { transform: rotate(-4deg); }
+    &:nth-child(5n+3)  a.thumbnail { transform: rotate(1deg); }
+    &:nth-child(7n+5)  a.thumbnail { transform: rotate(5deg); }
+    &:nth-child(11n+7) a.thumbnail { transform: rotate(9deg); }
+}

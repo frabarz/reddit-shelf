@@ -1,0 +1,180 @@
+.flairselector {
+    /*margin-left: -175px;*/
+    padding: 20px 25px!important;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 16px rgba(#000, .12);
+
+    .linklisting & {
+        position: absolute;
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: 100%;
+
+        margin: 38px 14px 0 0;
+        width: 300px!important;
+    }
+
+    .side & {
+        position: fixed;
+        top: 20%!important;
+        left: 50%!important;
+
+        width: 350px!important;
+    }
+
+    &.drop-choices.active {
+        border: 1px solid #e2e2e2;
+    }
+
+    h2 {
+        margin-bottom: 4px;
+
+        text-align: left;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        color: #24a0ed;
+        background: transparent;
+    }
+
+    form {
+        padding-top: 12px;
+        border-top: 1px solid #F7F7F7;
+
+        .flairselection {
+            text-align: left;
+
+            &:before {
+                display: block;
+                content: "Selected Flair:";
+                color: #738491;
+            }
+
+            .linkflair a.title {
+                font-size: 18px !important;
+                opacity: 100 !important;
+                color: #24a0ed !important;
+                cursor: default;
+            }
+
+            .flairremove {
+                padding: 4px 0;
+                margin-bottom: 8px;
+                visibility: hidden;
+                display: block !important;
+
+                a {
+                    visibility: visible;
+                    opacity: 100 !important;
+                    color: #24a0ed !important;
+                    margin-left: -4px;
+                    text-transform: capitalize;
+
+                    // &:first-letter {
+                    //     text-transform: capitalize;
+                    // }
+
+                    &:hover {
+                        text-decoration: underline!important
+                    }
+                }
+            }
+        }
+    }
+
+    li.selected {
+        border: none;
+        background-color: transparent;
+    }
+
+    .linkflair {
+        text-align: left;
+        padding: 0;
+    }
+
+    span.linkflairlabel {
+        margin: 1px;
+        line-height: 14px !important;
+    }
+
+    a.title {
+        line-height: 22px !important;
+        font-size: 18px !important;
+        opacity: 100 !important;
+    }
+
+    img {
+        position: relative;
+        left: 50%;
+        margin-left: -9px;
+        opacity: .5;
+    }
+
+    .error {
+        text-align: left;
+
+        // &:first-letter {
+        //     text-transform: capitalize;
+        // }
+
+        &:after {
+            display: block;
+            color: #b3b3b3;
+            content: "Go to /r/.../about/flair";
+        }
+    }
+
+    .customizer,
+    .customizer + button {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+
+.flairoptionpane {
+    max-height: 250px;
+    text-align: left;
+
+
+    ul {
+        display: block;
+        width: initial !important;
+        max-width: initial;
+        white-space: normal;
+
+        li {
+            display: inline-block !important;
+            padding: 0 !important;
+            width: 50%;
+            overflow: hidden;
+        }
+    }
+
+    span.linkflairlabel {
+        margin-left: 2px;
+        margin-right: 2px;
+        float: none;
+    }
+
+    a.title {
+        display: none !important;
+    }
+}
+
+.flairoptionpane ul li .linkflair:hover,
+.flairselector li:hover {
+    background-color: #F5F8F9;
+    border: 0 solid;
+}
+
+.flairselector li a,
+.flairselector form .flairselection a.author {
+    color: #738491!important;
+    font-size: 11px;
+}

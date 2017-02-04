@@ -1,0 +1,74 @@
+#header-bottom-right {
+    position: static;
+    display: block;
+
+    margin: 0;
+    padding: 0 10px;
+    height: 35px;
+
+    line-height: 35px;
+    font-size: 12px;
+    text-align: right;
+
+    background: $color-headerbar;
+    border-top: 1px solid mix($color-headerbar, #000, 90%);
+    border-radius: 0;
+
+    @include material-shadow(1);
+
+    a,
+    span,
+    ul,
+    form {
+        position: static;
+        display: inline-block;
+        vertical-align: top;
+        color: color-contrast($color-headerbar);
+    }
+
+    a {
+        color: mix(color-contrast($color-headerbar), rgb(127, 127, 127), 50%);
+    }
+
+    .loggedin & .user {
+        margin: 3px;
+        padding: 0 10px;
+
+        line-height: 29px;
+        font-size: 14px;
+
+        background: mix($color-headerbar, #fff, 75%);
+        border-radius: 20px;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .pref-lang {
+        font-weight: normal
+    }
+}
+
+#mail,
+#modmail,
+#new_modmail,
+.loggedin #header-bottom-right .pref-lang {
+    overflow: hidden;
+    height: 35px;
+    width: 35px;
+
+    text-indent: 36px;
+
+    background: $url-assetsdrrp 0/#{295px} !important;
+}
+
+#mail { background-position: -95px 0 !important;}
+#modmail { background-position: -130px 0 !important;}
+#new_modmail {background-position: -165px 0 !important;}
+.loggedin #header-bottom-right .pref-lang {background-position: -200px 0 !important;}
+
+/* RES: Hides the button to toggle the bar, since we are using it for CSS */
+#userbarToggle {
+    display: none !important;
+}

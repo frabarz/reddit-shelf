@@ -1,0 +1,81 @@
+.side .usertext-body {
+    margin: $sidebar-cellpadding 0 0;
+    padding: 0;
+}
+
+.side .md {
+    padding: 0 $sidebar-cellpadding;
+    background: #fff;
+    border: 1px solid $color-border;
+
+    $side-over: (-1 * ($sidebar-cellpadding + 1px));
+
+    hr {
+        margin: $sidebar-cellpadding $side-over 0;
+        height: $sidebar-cellpadding;
+
+        background: $color-background;
+        border: 0 solid $color-border;
+        border-width: 1px 0;
+    }
+
+    h1, h2, h3, h4 {
+        margin: -1px $side-over 0;
+    }
+
+    h2 {
+        padding: 5px 8px;
+
+        line-height: 16px;
+        font-size: 16px;
+        text-align: right;
+        text-transform: uppercase;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    hr + h2 {}
+
+    ol {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+
+        li {
+            position: relative;
+            padding: 10px 0 10px 26px;
+            min-height: 23px;
+
+            border-top: 2px dotted $color-bluegray;
+
+            counter-increment: item;
+
+            &:first-child {
+                border: 0 none;
+            }
+
+            &::before {
+                content: counter(item);
+
+                position: absolute;
+                top: 10px;
+                left: 0;
+
+                line-height: 26px;
+                font-size: 26px;
+                font-family: $font-verdana;
+                font-weight: bold;
+
+                color: $color-background;
+                @include text-stroke(#000);
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}

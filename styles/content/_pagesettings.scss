@@ -1,0 +1,41 @@
+.thing.fancy-settings {
+    .pretty-form {
+        margin-right: $sidebar-margin;
+    }
+
+    .linefield {
+        margin-right: -1px;
+
+        .delete-field + .usertext-edit,
+        ul + .usertext-edit,
+        .usertext-edit .delete-field {
+            margin-top: 10px;
+        }
+
+        .delete-field {
+            td {
+                vertical-align: middle;
+            }
+
+            li,
+            td {
+                padding: 4px 0;
+            }
+        }
+
+        input,
+        select {
+            padding: 0 2px;
+            font-size: 18px;
+            line-height: 2em !important;
+        }
+
+        .bottom-area {
+            margin: 0 6px;
+        }
+    }
+
+    .save-button {
+        text-align: center;
+    }
+}

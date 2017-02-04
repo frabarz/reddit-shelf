@@ -1,0 +1,82 @@
+$bullet-yellow: #ffe400;
+$bullet-red: #700;
+
+a[href="#bullet"] {
+    position: relative;
+    display: inline-block;
+
+    margin: 2px;
+    margin-left: 6px;
+    padding: 4px 10px;
+    padding-right: 50px;
+
+    font-weight: bold;
+    text-decoration: none !important;
+
+    color: #000 !important;
+    background-color: $bullet-yellow;
+    box-shadow: inset -3px 3px mix($bullet-yellow, #fff, 75%), inset -2px 5px mix($bullet-yellow, #fff, 25%);
+    border: 2px solid #000;
+
+    border-top-left-radius: 6px 50%;
+    border-bottom-left-radius: 6px 50%;
+    border-top-right-radius: 36px 50%;
+    border-bottom-right-radius: 36px 50%;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+
+        border: 2px solid #000;
+
+        border-top-left-radius: 6px 50%;
+        border-bottom-left-radius: 6px 50%;
+    }
+
+    &::before {
+        z-index: -1;
+        left: -7px;
+        top: -3px;
+        bottom: -3px;
+
+        width: 12px;
+
+        background-color: $bullet-yellow;
+
+        border-top-right-radius: 3px 50%;
+        border-bottom-right-radius: 3px 50%;
+    }
+
+    &::after {
+        top: -2px;
+        bottom: -2px;
+        right: 30px;
+        width: 10px;
+        border-width: 2px 0 2px 2px;
+    }
+}
+
+body.red-bullet a[href="#bullet"] {
+    background-color: $bullet-red;
+    color: #fff !important;
+    box-shadow: inset -3px 3px mix($bullet-red, #fff, 75%), inset -2px 5px mix($bullet-red, #fff, 50%);
+
+    &::before {
+        background-color: $bullet-red;
+    }
+}
+
+a[href^="#nsd"] {
+    font-family: $font-verdana;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+a[href="#nsdagree"] {
+    @include nsdhighlight(#158cdc);
+}
+
+a[href="#nsdrefute"] {
+    @include nsdhighlight(#fab623);
+}

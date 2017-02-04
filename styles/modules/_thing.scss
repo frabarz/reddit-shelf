@@ -1,0 +1,131 @@
+.thing {
+    .title,
+    .title:visited {
+        color: inherit;
+    }
+
+    .entry {
+        margin: 0;
+
+        /* RES: Hides the expandos and annotations inside comments */
+        .keyNavAnnotation,
+        .commentImg {
+            display: none !important;
+        }
+    }
+
+    .flat-list {
+        padding: 0 10px !important;
+
+        line-height: 30px;
+        white-space: nowrap;
+
+        color: rgba(#000, .5);
+
+        .listing-page & {
+            text-overflow: clip;
+            overflow: hidden;
+        }
+
+        > * {
+            padding: 0 4px;
+        }
+
+        li,
+        span,
+        a {
+            display: inline-block;
+            vertical-align: top;
+            line-height: inherit;
+        }
+
+        li a,
+        span a {
+            margin: 0;
+
+            font-size: 11px;
+
+            color: inherit;
+            border: 0 none;
+            outline: 0 none;
+
+            &:hover {
+                color: #242424;
+            }
+        }
+
+        .option {
+            display: none;
+
+            &.active {
+                display: inline-block;
+            }
+        }
+
+        > li:first-child,
+        > .first {
+            margin-right: 1em;
+            padding: 0;
+            color: #000;
+        }
+
+        ~ div {
+            margin-top: 10px;
+        }
+
+        .pretty-button {
+            display: inline-block;
+            margin: 7px 7px 0 0;
+            padding: 0 4px;
+
+            line-height: 16px;
+            font-weight: bold;
+
+            color: #111;
+            background: rgba(#999, .4);
+            border-radius: 0;
+            outline: 1px solid;
+
+            &.positive {
+                color: #282;
+            }
+
+            &.negative {
+                color: #822;
+            }
+        }
+    }
+
+    span.stamp {
+        padding: 0;
+        border: 0 !important;
+    }
+
+    .nsfw-stamp acronym,
+    .spoiler-stamp span {
+        display: inline-block;
+        vertical-align: baseline;
+        padding: 0 4px;
+        line-height: 17px;
+        border: 1px solid;
+        border-radius: 0;
+    }
+
+    .nsfw-stamp acronym {
+        color: #c0392b;
+    }
+
+    .spoiler-stamp span {
+        color: #000;
+    }
+
+    .give-gold {
+        color: #988143 !important;
+    }
+}
+
+/* RES: Prevents background color on clicking a thing */
+.res .RES-keyNav-activeElement,
+.res .RES-keyNav-activeElement .md-container {
+    background-color: transparent !important;
+}

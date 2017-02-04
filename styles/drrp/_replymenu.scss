@@ -1,0 +1,15 @@
+.usertext {
+    .rl-actionmenu {
+        flex: 1 0 auto;
+        order: 1;
+    }
+
+    .rl-button {
+        padding: 2px;
+        line-height: 1.4em;
+
+        background: #fff;
+        border: 1px solid $color-border;
+        border-radius: 2px;
+    }
+}

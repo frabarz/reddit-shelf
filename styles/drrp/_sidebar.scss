@@ -1,0 +1,30 @@
+a.rl-scanned,
+a[href="#countdown"] {
+    pointer-events: none;
+    color: inherit;
+    cursor: text;
+}
+
+.side {
+    ul:first-child + p {
+        margin: $sidebar-cellpadding 0;
+    }
+
+    a[href$="#discord"] {
+        display: block;
+        overflow: hidden;
+        height: 72px;
+
+        white-space: nowrap;
+        text-indent: 300px;
+
+        background: $url-btndiscord center no-repeat;
+
+        transform: scale(0.9);
+        transition: transform 0.2s cubic-bezier(0.18,0.89,0.32,1.28);
+
+        &:hover {
+            transform:scale(1);
+        }
+    }
+}

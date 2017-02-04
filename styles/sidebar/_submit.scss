@@ -1,0 +1,53 @@
+.sidebox.submit .morelink a,
+.sidecontentbox a.helplink {
+    display: block;
+    padding: 0 15px;
+
+    width: 300px;
+    height: 36px;
+
+    line-height: 34px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    color: color-contrast($color-headerbg);
+    background: $color-headerbg;
+    border: 2px solid darken($color-headerbg, 25%);
+    border-radius: 18px;
+
+    box-sizing: border-box;
+
+    &:hover {
+        background: mix($color-headerbg, $color-background, 25%);
+    }
+
+    &:active {
+        background: mix($color-headerbg, $color-background, 50%);
+    }
+}
+
+.sidebox.submit {
+    .morelink {
+        height: auto;
+
+        font-weight: normal;
+
+        background: transparent;
+        border: 0 none;
+    }
+}
+
+.sidecontentbox a.helplink {
+    float: none;
+    margin-bottom: $sidebar-cellpadding;
+
+    letter-spacing: -1px;
+}
+
+.sidebox.create .morelink,
+.sidebox.submit .spacer a,
+.sidebox.create .spacer a,
+.morelink .nub,
+.morelink .nub:hover { display: none }

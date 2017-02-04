@@ -1,0 +1,411 @@
+.commentarea {
+    margin-right: $sidebar-margin;
+    border-right: 1px solid $color-border;
+
+    .sitetable {
+        padding-top: 14px;
+    }
+}
+
+.panestack-title {
+    padding: .5em 1em;
+    margin: 15px 0;
+
+    border: 0 none;
+    border-top: 1px solid $color-border;
+
+    .title {
+        font-size: 20px;
+    }
+}
+
+.commentarea form.usertext.cloneable {
+    margin: 0;
+    padding: 14px 0 0 $comment-paddingleft;
+
+    .commentingAs {
+        padding: 0 8px !important;
+        height: $comment-taglineheight;
+
+        line-height: $comment-taglineheight;
+        font-size: 14px;
+
+        color: $color-highlight;
+        background: #fff;
+        border: 1px solid $color-border;
+        border-radius: 0 !important;
+
+        a {
+            font-weight: bold;
+        }
+    }
+}
+
+.thing.comment {
+    position: relative;
+
+    margin: 0 0 14px;
+    padding: 0 0 0 $comment-paddingleft;
+
+    background: transparent;
+
+    .midcol {
+        position: absolute;
+        left: 0;
+
+        margin: ($comment-taglineheight + 8px) 0 0;
+        width: $comment-paddingleft;
+
+        .arrow {
+            $width: 8px;
+            $height: 12px;
+
+            margin-bottom: $height * 0.5;
+            width: 0;
+            height: 0;
+            background: transparent;
+            border: $width solid transparent;
+            border-top: 0 none;
+
+            &.up {
+                border-bottom: $height solid mix($color-background, #000, 50%);
+            }
+
+            &.upmod {
+                border-bottom: $height solid $color-upvote;
+            }
+
+            &.down {
+                border-top: $height solid mix($color-background, #000, 50%);
+            }
+
+            &.downmod {
+                border-top: $height solid $color-downvote;
+            }
+        }
+    }
+
+    .entry {
+        overflow: visible;
+
+        .md .RESUserTag {
+            display: none;
+        }
+    }
+
+    .tagline {
+        position: relative;
+        display: block;
+        height: $comment-taglineheight;
+
+        line-height: $comment-taglineheight;
+        font-size: 14px;
+
+        color: #000;
+        border: 0 solid $color-border;
+        border-width: 0 0 1px 1px;
+    }
+
+    .tagline .author,
+    .tagline .userattrs,
+    .tagline .RESUserTag,
+    > .entry .expand + em {
+        float: left;
+        display: block;
+        margin: -1px 0 -1px -1px;
+        padding: 0 8px !important;
+
+        color: $color-highlight;
+        background: #fff;
+        border-width: 1px;
+        border-radius: 0 !important;
+    }
+
+    .expand {
+        position: absolute;
+        left: ($comment-taglineheight + $comment-paddingleft + 2px) / -2;
+
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        width: $comment-taglineheight;
+        height: $comment-taglineheight;
+
+        color: transparent !important;
+        border: 0 none;
+        border-radius: 50%;
+
+        &:hover {
+            $light: mix(#fff, #069, 50%);
+            text-decoration: none;
+
+            background-color: $light;
+            box-shadow: 0 0 1px $light, 0 0 2px $light, 0 0 3px $light;
+        }
+    }
+
+    .flair {
+        position: absolute;
+        bottom: -1px;
+        right: 100%;
+        left: -1 * ($comment-paddingleft + 1px);
+        z-index: 10;
+
+        margin: 0 auto;
+
+        pointer-events: none;
+    }
+
+    .author::before {
+        content: 'u/';
+    }
+
+    .userattrs {
+        padding: 0 4px !important;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    .score,
+    .tagline .score-hidden,
+    time {
+        margin-left: 10px;
+        font-weight: 400;
+    }
+
+    time {
+        font-weight: 700;
+    }
+
+    .usertext {
+        border-width: 0 0 0 1px;
+
+        .usertext-body {
+            padding-bottom: 0;
+        }
+
+        &.border .usertext-body {
+            padding-left: 10px;
+        }
+    }
+
+    .flat-list {
+        border-width: 0 0 1px 1px;
+    }
+
+    .child {
+        margin-top: 0;
+        margin-left: 0;
+
+        border: 0 solid $color-border;
+        border-width: 0 0 0 1px;
+        background: rgba(#fff, .15);
+    }
+
+    &.collapsed {
+        margin-bottom: 15px;
+
+        .midcol {
+            display: none;
+        }
+
+        .flair {
+            display: inline-block;
+        }
+    }
+
+    > .entry .author,
+    > .entry .userattrs,
+    > .entry .RESUserTag,
+    > .entry .usertext,
+    > .entry .flat-list,
+    > .entry .expand + em {
+        background: #fff;
+        border-style: solid;
+        border-color: $color-border;
+    }
+
+    &.new-comment {
+        > .entry .author,
+        > .entry .userattrs,
+        > .entry .RESUserTag,
+        > .entry .usertext,
+        > .entry .flat-list {
+            background: mix(#069, #fff, 25%);
+        }
+    }
+
+    &.stickied {
+        > .entry .author,
+        > .entry .userattrs,
+        > .entry .RESUserTag,
+        > .entry .usertext,
+        > .entry .flat-list {
+            background: mix(#282, #fff, 25%);
+        }
+    }
+
+    &.banned-user {
+        overflow: visible;
+
+        > .entry .author,
+        > .entry .userattrs,
+        > .entry .RESUserTag,
+        > .entry .usertext,
+        > .entry .flat-list {
+            background: rgba(250,128,114,0.5);
+        }
+    }
+
+    &.spam {
+        > .entry .author,
+        > .entry .userattrs,
+        > .entry .RESUserTag,
+        > .entry .usertext,
+        > .entry .flat-list {
+            background: #fa8072;
+        }
+    }
+
+    > .entry .usertext.border {
+        &,
+        & + .flat-list {
+            background-color: mix(#fc0, #fff, 25%);
+        }
+    }
+
+    &.deleted {
+        > .entry .expand + em,
+        > .entry .usertext,
+        > .entry .flat-list {
+            background: #ddd;
+        }
+
+        > .entry .usertext-body {
+            display: block;
+            padding: 8px 14px !important;
+        }
+    }
+
+    /* /r/subreddit/comments */
+    .content > .linklisting > & {
+        margin-top: 20px;
+        padding-top: 0;
+
+        .parent {
+            padding: 6px 0;
+
+            line-height: 1.4em;
+
+            color: $color-highlight;
+
+            .title {
+                display: block;
+                margin: 0;
+                text-transform: uppercase;
+            }
+
+            .flair {
+                display: none;
+            }
+        }
+    }
+}
+
+.thing.morechildren {
+    .tagline {
+        display: none;
+    }
+
+    .morecomments {
+        display: block;
+        padding-left: $comment-paddingleft;
+
+        .button {
+            display: inline-block;
+            margin: 0;
+            padding: 6px 10px;
+
+            font-size: 11px !important;
+
+            background: #eee;
+            border: 1px solid #ccc;
+
+            &:hover {
+                background: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.thing.morerecursion {
+    display: block;
+    padding: 0 0 10px $comment-paddingleft;
+
+    .deepthread {
+        display: block;
+
+        &::after {
+            content: unset;
+        }
+    }
+
+    .deepthread a {
+        position: relative;
+        display: inline-block;
+        padding: 0 10px;
+
+        line-height: $comment-taglineheight;
+        font-size: 13px !important;
+        text-transform: uppercase;
+
+        background: #eee;
+        border: 1px solid #BEBEBE;
+        border-right: 0 none;
+
+        &::before {
+            top: -1px;
+            border-width: 0.5 * ($comment-taglineheight + 2) 17px;
+            border-color: transparent #BEBEBE;
+        }
+
+        &::after {
+            margin: 1px 0;
+            border-width: ($comment-taglineheight / 2) 16px;
+            border-color: transparent #eee;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+
+            position: absolute;
+            top: -1px;
+            left: 100%;
+
+            width: 0;
+            height: 0;
+
+            border-style: solid;
+            border-right: 0 none;
+        }
+
+        &:hover {
+            text-decoration: none;
+            background: #fff;
+
+            &::after {
+                border-color: transparent #fff;
+            }
+        }
+    }
+
+    .tagline,
+    .child {
+        display: none;
+    }
+}

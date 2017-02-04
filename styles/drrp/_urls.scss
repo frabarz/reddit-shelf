@@ -1,0 +1,25 @@
+@if ($ENV == "development") {
+    $url-logotransparent: url(/images/logo_010.png);
+    $url-logosolid: url(/images/logo.png);
+
+    $url-flairs: url(/images/flairs.png);
+
+    $url-btndiscord: url(/images/btn-discord.png);
+
+    $url-assets: url(https://b.thumbs.redditmedia.com/5_zGRCZTF6dAblNoyEERQvBoWrzMd9pl0mXvwA8gVGg.png);
+    // $hambaga: "//c.thumbs.redditmedia.com/bn09SsTK9ryFj4Nh.png";
+    $url-assetsdrrp: url(/images/assets_drrp.png);
+    $url-announcementbg: url(/images/hud.png);
+
+    $url-thawards:     url(/images/thumb_awards.png);
+    $url-thdndespair:  url(/images/thumb_dnd.png);
+    $url-thdailylife:  url(/images/thumb_dailylife.png);
+    $url-thinsertcoin: url(/images/thumb_interest.png);
+    $url-thmonoescape: url(/images/thumb_monoescape.png);
+    $url-thmonologue:  url(/images/thumb_monologue.png);
+    $url-thsidetrial:  url(/images/thumb_sidetrial.png);
+    $url-thsurvivor:   url(/images/thumb_survivor.png);
+    $url-thtrial:      url(/images/thumb_trial.png);
+    $url-thwhodunnit:  url(/images/thumb_whodunnit.png);
+    $url-thwriting:    url(/images/thumb_writing.png);
+}
