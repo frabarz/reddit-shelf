@@ -1,3 +1,5 @@
-$font-arial: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
-$font-verdana: Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, sans-serif;
-$font-segoe: "Segoe UI", Optima, Candara, Calibri, Arial, sans-serif;
+$stack-end: -apple-system, BlinkMacSystemFont, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-arial: "Helvetica Neue", "Nimbus Sans L", "Liberation Sans", FreeSans, $stack-end;
+$font-verdana: Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, $stack-end;
+$font-segoe: "Segoe UI", Optima, Candara, Calibri, $stack-end;
+$font-legiblesmall: Calibri, Segoe UI, Roboto, Tahoma, $stack-end;
