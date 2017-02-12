@@ -33,20 +33,10 @@
 .leavemoderator { padding-top: 12px; }
 
 .titlebox {
-    > h1 {
-        a {
-            overflow: hidden;
-            display: block;
-            height: 50px;
+    margin-top: 20px;
 
-            text-indent: 300px;
-
-            background: $url-logosolid center/contain no-repeat;
-
-            // image-rendering: -webkit-optimize-contrast;
-            // image-rendering: -moz-crisp-edges;
-            // image-rendering: crisp-edges;
-        }
+    h1 {
+        display: none;
     }
 
     .subscribe-button {

@@ -5,12 +5,6 @@ body {
     background: $color-background;
 }
 
-::-moz-selection {
-    background-color: #0079d3;
-    text-shadow: none;
-    color: #fff
-}
-
 ::selection {
     background-color: #0079d3;
     text-shadow: none;
@@ -18,14 +12,16 @@ body {
 }
 
 :focus {
-    outline: 0!important
+    outline: 0 !important;
 }
 
 a,
+a:focus,
 a:visited,
 a:target,
-html body *.visited {
+.icon-menu a {
     color: inherit;
+    background: transparent;
 }
 
 input,
