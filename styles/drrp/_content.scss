@@ -1,15 +1,16 @@
 .link {
-    &.linkflair-trialawards { background-image: $url-thawards; }
-    &.linkflair-dndespair   { background-image: $url-thdndespair; }
-    &.linkflair-dailylife   { background-image: $url-thdailylife; }
-    &.linkflair-insertcoin  { background-image: $url-thinsertcoin; }
-    &.linkflair-monoescape  { background-image: $url-thmonoescape; }
-    &.linkflair-monologue   { background-image: $url-thmonologue; }
-    &.linkflair-sidetrial   { background-image: $url-thsidetrial; }
-    &.linkflair-survivor    { background-image: $url-thsurvivor; }
-    &.linkflair-trial       { background-image: $url-thtrial; }
-    &.linkflair-whodunnit   { background-image: $url-thwhodunnit; }
-    &.linkflair-writingtips { background-image: $url-thwriting; }
+    &.linkflair-dndespair   { background-image: $url-linkdndespair; }
+    &.linkflair-dailylife   { background-image: $url-linkdailylife; }
+    &.linkflair-insertcoin  { background-image: $url-linkinsertcoin; }
+    &.linkflair-monoescape  { background-image: $url-linkmonoescape; }
+    &.linkflair-monologue   { background-image: $url-linkmonologue; }
+    &.linkflair-royale      { background-image: $url-linkroyale; }
+    &.linkflair-sidetrial   { background-image: $url-linksidetrial; }
+    &.linkflair-survivor    { background-image: $url-linksurvivor; }
+    &.linkflair-trial       { background-image: $url-linktrial; }
+    &.linkflair-trialawards { background-image: $url-linktrialawards; }
+    &.linkflair-whodunnit   { background-image: $url-linkwhodunnit; }
+    &.linkflair-writingtips { background-image: $url-linkwriting; }
 
     [lang=ft] &:not(.linkflair-trial),
     [lang=fs] &:not(.linkflair-sidetrial),

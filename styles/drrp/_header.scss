@@ -1,0 +1,29 @@
+#header-bottom-left {
+    .pagename {
+        bottom: -13px;
+
+        // Align the internal title in /about/stylesheet and others
+        line-height: 65px;
+    }
+
+    .pagename a {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+
+        width: 396px;
+        height: 65px;
+
+        text-indent: -300px;
+
+        background: $url-logosolid no-repeat center top/#{contain};
+
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
+    }
+
+    .tabmenu {
+        margin: 0 0 0 420px;
+    }
+}
