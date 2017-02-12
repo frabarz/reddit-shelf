@@ -24,6 +24,7 @@
         border: none;
         border-left: 1px solid $color-border;
         border-radius: 0;
+        box-shadow: none !important;
         transition-property: none;
 
         &:hover {

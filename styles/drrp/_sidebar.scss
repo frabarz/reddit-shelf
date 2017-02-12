@@ -6,44 +6,91 @@ a[href="#countdown"] {
 }
 
 .side {
+    $side-over: (-1 * ($sidebar-cellpadding + 1px));
+
     &::after {
         content: 'Using theme /r/reddit_shelf';
         display: block;
         text-align: right;
     }
 
+    blockquote {
+        margin: 0;
+    }
+
     blockquote ol + ul {
         position: absolute;
-        top: (25px + $header-height) - 32px;
+        top: (25px + 10px);
+        right: 10px;
         z-index: 100;
 
         margin: 0;
         padding: 0;
-        height: 32px;
+        // height: 32px;
 
         li {
-            display: inline-block;
-            vertical-align: bottom;
+            display: block;
+            background: $url-iconsoffsite right top #{'/'} 48px no-repeat;
+
+            &:nth-child(1) {
+                background-position: right 0;
+            }
+
+            &:nth-child(2) {
+                background-position: right -48px;
+            }
         }
 
         a {
             display: block;
-            white-space: nowrap;
-            width: 32px;
-            height: 32px;
+            padding-right: 48px;
 
-            // text-indent: 32px;
+            line-height: 48px;
             text-align: right;
+            white-space: nowrap;
 
-            background: $url-flairs top left no-repeat;
+            color: #fff;
+
+            opacity: 0;
+            transform: scale(0.9);
+            transform-origin: right center;
+
+            transition: transform 0.2s cubic-bezier(0.18,0.89,0.32,1.28);
+            transition-property: transform, opacity;
+        }
+
+        li:hover a {
+            opacity: 1;
+            transform: scale(1);
         }
     }
 
-    a[href$="#wiki_archive"] {
-    }
+    blockquote + ul {
+        position: relative;
+        z-index: 1000;
 
-    ul:first-child + p {
-        margin: $sidebar-cellpadding 0;
+        margin: -6px $side-over $side-over !important;
+        padding: 0;
+
+        background: $color-background;
+        list-style: none;
+
+        a {
+            $this-color: darken(#8cfc2e, 30%);
+            $this-bgcolor: mix($this-color, $color-background, 50%);
+
+            display: block;
+            margin-bottom: 3px;
+
+            line-height: 28px;
+            font-size: 16px;
+            text-align: center;
+
+            color: darken($this-color, 10%);
+            background: $this-bgcolor;
+            border: 1px solid $this-color;
+            border-radius: 2px;
+        }
     }
 
     h2 + p + ul {
@@ -89,26 +136,6 @@ a[href="#countdown"] {
             }
         }
     }
-
-    a[href$="#discord"] {
-        display: block;
-        overflow: hidden;
-        height: 72px;
-
-        white-space: nowrap;
-        text-indent: 300px;
-
-        background: $url-btndiscord center no-repeat;
-
-        transform: scale(0.9);
-        transition: transform 0.2s cubic-bezier(0.18,0.89,0.32,1.28);
-
-        &:hover {
-            transform:scale(1);
-        }
-    }
-
-
 
     a[title^=roll] {
         display: block;
