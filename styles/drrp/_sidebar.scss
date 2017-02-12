@@ -6,8 +6,88 @@ a[href="#countdown"] {
 }
 
 .side {
+    &::after {
+        content: 'Using theme /r/reddit_shelf';
+        display: block;
+        text-align: right;
+    }
+
+    blockquote ol + ul {
+        position: absolute;
+        top: (25px + $header-height) - 32px;
+        z-index: 100;
+
+        margin: 0;
+        padding: 0;
+        height: 32px;
+
+        li {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        a {
+            display: block;
+            white-space: nowrap;
+            width: 32px;
+            height: 32px;
+
+            // text-indent: 32px;
+            text-align: right;
+
+            background: $url-flairs top left no-repeat;
+        }
+    }
+
+    a[href$="#wiki_archive"] {
+    }
+
     ul:first-child + p {
         margin: $sidebar-cellpadding 0;
+    }
+
+    h2 + p + ul {
+        display: flex;
+        flex-direction: row;
+        margin: 0 -2px;
+        padding: 0;
+        font-size: 0;
+        white-space: nowrap;
+        overflow: hidden;
+
+        li {
+            flex: 1 1 auto;
+            display: inline-block;
+            width: 40%;
+            margin: 0 2px;
+        }
+
+        a {
+            display: block;
+            height: 40px;
+
+            background: $url-browsers center#{'/'}48px no-repeat;
+            border: 1px solid;
+            border-radius: 2px;
+
+            &[href*=chrome] {
+                color: #d44f52;
+                background-color: mix(#fff, #d44f52, 90%);
+                background-position: center -58px;
+            }
+
+            &[href*=mozilla] {
+                color: #fc8c2e;
+                background-color: mix(#fff, #fc8c2e, 90%);
+                background-position: center -108px;
+            }
+
+            &[href*=github] {
+                color: #000;
+                background-color: mix(#fff, #000, 90%);
+                background-position: center -4px;
+            }
+        }
     }
 
     a[href$="#discord"] {
@@ -25,6 +105,52 @@ a[href="#countdown"] {
 
         &:hover {
             transform:scale(1);
+        }
+    }
+
+
+
+    a[title^=roll] {
+        display: block;
+        padding: 4px $sidebar-cellpadding;
+
+        line-height: 1.2;
+        font-weight: bold;
+
+        color: lighten($color-headerbg, 10%);
+        border: 1px solid;
+        border-radius: 2px;
+
+        &:hover {
+            background: mix($color-headerbg, color-contrast($color-headerbg), 10%);
+        }
+
+        &::before {
+            float: right;
+            margin-left: 10px;
+            font-size: 0.9em;
+        }
+    }
+
+    a[title$=archived]::after {
+        content: '[Archived]';
+    }
+
+    a[title^=rolldiscord]::before {
+        content: 'Discord';
+        color:#6e8ad2;
+    }
+
+    a[title^=rollreddit]{
+        &::before {
+            content: 'Reddit';
+            color: $color-upvote;
+        }
+        &::after {
+            content: attr(href);
+            display: block;
+            font-size: 0.8em;
+            font-weight: normal;
         }
     }
 }
