@@ -26,8 +26,8 @@
         width: auto !important;
         max-width: initial;
 
-        /* RES: fix markdown toolbar position */
         body.res & {
+            /* RES: fix markdown toolbar position */
             position: relative;
             padding-top: 60px;
 
@@ -81,8 +81,8 @@
             border-width: 0 0 0 1px;
         }
 
-        /* RES: Fix markdown live preview position */
         .livePreview {
+            /* RES: Fix markdown live preview position */
             flex: 0 0 40%;
         }
     }

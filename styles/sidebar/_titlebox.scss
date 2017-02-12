@@ -224,11 +224,11 @@
     }
 }
 
-/* RES: Hides the extra buttons in the titlebox */
 .titlebox {
     .multi-count,
     .res-fancy-toggle-button,
     .res-sr-style-toggle {
+        /* RES: Hides the extra buttons in the titlebox */
         display: none;
     }
 }

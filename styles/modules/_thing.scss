@@ -7,9 +7,9 @@
     .entry {
         margin: 0;
 
-        /* RES: Hides the expandos and annotations inside comments */
         .keyNavAnnotation,
         .commentImg {
+            /* RES: Hides the expandos and annotations inside comments */
             display: none !important;
         }
     }
@@ -124,8 +124,8 @@
     }
 }
 
-/* RES: Prevents background color on clicking a thing */
 .res .RES-keyNav-activeElement,
 .res .RES-keyNav-activeElement .md-container {
+    /* RES: Prevents background color on clicking a thing */
     background-color: transparent !important;
 }
