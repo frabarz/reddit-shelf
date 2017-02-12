@@ -295,6 +295,10 @@
         margin-top: 20px;
         padding-top: 0;
 
+        &:first-child {
+            margin-top: 0;
+        }
+
         .parent {
             padding: 6px 0;
 
@@ -311,6 +315,14 @@
             .flair {
                 display: none;
             }
+        }
+
+        .entry .usertext {
+            border-width: 0 1px;
+        }
+
+        .entry .flat-list {
+            border-width: 0 1px 1px;
         }
     }
 }

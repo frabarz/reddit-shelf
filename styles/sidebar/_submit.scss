@@ -14,7 +14,7 @@
 
     color: color-contrast($color-headerbg);
     background: $color-headerbg;
-    border: 2px solid darken($color-headerbg, 25%);
+    border: 2px solid mix($color-headerbg, #000, 60%);
     border-radius: 18px;
 
     box-sizing: border-box;

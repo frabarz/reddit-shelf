@@ -7,7 +7,7 @@ body > .content {
     padding-top: (32px + $sidebar-cellpadding);
 }
 
-.side .md ul:first-of-type {
+.side .md blockquote ol:first-child {
     overflow: hidden;
 
     position: absolute;
@@ -31,11 +31,10 @@ body > .content {
 
     li {
         position: absolute;
-        left: 0;
-        right: 0;
 
         display: block;
         padding: 0;
+        width: 100%;
 
         line-height: 30px;
 

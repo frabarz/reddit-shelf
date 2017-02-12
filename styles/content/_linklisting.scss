@@ -192,6 +192,10 @@
         border-top: 1px solid $color-border;
         background-image: $url-assets !important;
 
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
+
         .subscriber & {
             left: 41px;
         }
@@ -281,6 +285,7 @@
         overflow: visible;
         margin-bottom: 0;
         font-size: 18px;
+        color: color-contrast($color-bgthing);
     }
 
 

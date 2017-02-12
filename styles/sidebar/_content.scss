@@ -1,81 +1,180 @@
-.side .usertext-body {
-    margin: $sidebar-cellpadding 0 0;
-    padding: 0;
-}
-
-.side .md {
-    padding: 0 $sidebar-cellpadding;
-    background: #fff;
-    border: 1px solid $color-border;
-
+.side {
     $side-over: (-1 * ($sidebar-cellpadding + 1px));
 
-    hr {
-        margin: $sidebar-cellpadding $side-over 0;
-        height: $sidebar-cellpadding;
+    .login-form {
+        color: color-contrast($color-headerbg);
+        background: $color-headerbg;
+        border: 1px solid $color-border;
+    }
+
+    .usertext-body {
+        margin: $sidebar-cellpadding 0 0;
+        padding: 0;
+    }
+
+    .md h2,
+    .sidecontentbox .title {
+        margin: 0;
+        padding: 0 $sidebar-cellpadding;
+
+        height: 9px;
 
         background: $color-background;
         border: 0 solid $color-border;
-        border-width: 1px 0;
+        border-width: 0 0 1px;
     }
 
-    h1, h2, h3, h4 {
-        margin: -1px $side-over 0;
-    }
-
-    h2 {
-        padding: 5px 8px;
-
-        line-height: 16px;
-        font-size: 16px;
-        text-align: right;
+    .md h2,
+    .sidecontentbox h1 {
+        line-height: 18px;
+        font-size: 18px;
+        font-weight: 900;
         text-transform: uppercase;
+        white-space: nowrap;
+
+        color: $color-headerbg;
 
         a {
             color: inherit;
         }
     }
 
-    hr + h2 {}
+    .md {
+        padding: 0 $sidebar-cellpadding;
+        background: $url-pixelpattern;
+        border: 1px solid $color-border;
 
-    ol {
-        margin: 0;
-        padding: 0;
+        h2 {
+            margin: $sidebar-cellpadding $side-over 10px;
+            padding-top: 14px;
 
-        list-style: none;
+            border-width: 1px 0;
+        }
 
-        li {
-            position: relative;
-            padding: 10px 0 10px 26px;
-            min-height: 23px;
+        > ol {
+            margin: 0;
+            padding: 0;
 
-            border-top: 2px dotted $color-bluegray;
+            list-style: none;
 
-            counter-increment: item;
+            li {
+                position: relative;
+                padding: 10px 0 10px 26px;
+                min-height: 23px;
 
-            &:first-child {
-                border: 0 none;
+                border-top: 2px dotted $color-bluegray;
+
+                counter-increment: item;
+
+                &:first-child {
+                    border: 0 none;
+                }
+
+                &::before {
+                    content: counter(item);
+
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+
+                    line-height: 26px;
+                    font-size: 26px;
+                    font-family: $font-verdana;
+                    font-weight: bold;
+
+                    color: $color-background;
+                    @include text-stroke(#000);
+                }
             }
 
-            &::before {
-                content: counter(item);
-
-                position: absolute;
-                top: 10px;
-                left: 0;
-
-                line-height: 26px;
-                font-size: 26px;
-                font-family: $font-verdana;
-                font-weight: bold;
-
-                color: $color-background;
-                @include text-stroke(#000);
+            p {
+                margin: 0;
             }
         }
 
-        p {
+        hr {
+            margin: $sidebar-cellpadding $side-over 0;
+            height: $sidebar-cellpadding;
+
+            background: $color-background;
+            border: 0 solid $color-border;
+            border-width: 1px 0;
+        }
+    }
+
+    .sidecontentbox {
+        overflow: hidden;
+
+        &.collapsible {
+            margin-bottom: 20px;
+        }
+
+        .content {
+            padding: 8px $sidebar-cellpadding 4px;
+
+            border: 1px solid $color-border;
+            border-top: 0 none;
+            background: $url-pixelpattern;
+        }
+
+        .collapse-button {
+            float: right;
             margin: 0;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+        }
+
+        .helplink ~ ul {
+            text-align: center;
+
+            li {
+                display: inline-block;
+                padding: 4px;
+                width: 50%;
+                box-sizing: border-box;
+
+	            text-align: left;
+
+                .flair {
+                    margin-left: 15%;
+                }
+
+                .author {
+                    display: block;
+                    margin: 0;
+                    padding: 1px 3px;
+
+                    font-size: 12px;
+                    font-family: $font-segoe;
+
+                    color: #fff;
+                    background: $color-highlight;
+                    border-radius: 2px;
+                }
+            }
+
+            .more {
+                display: block;
+                width: auto;
+            }
+        }
+    }
+
+    .titlebox .bottom {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding: 0 $sidebar-cellpadding;
+        height: 22px;
+
+        line-height: 22px;
+        letter-spacing: -0.3px;
+
+        background: #fff;
+        border: 1px solid $color-border;
+
+        .flair {
+            display: none;
         }
     }
 }
