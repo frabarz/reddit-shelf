@@ -10,7 +10,7 @@
         height: 60px;
 
         background: #fff;
-        @include material-shadow(1);
+        box-shadow: material-shadow(1);
 
         image-rendering: -moz-pixelated;
         image-rendering: pixelated;

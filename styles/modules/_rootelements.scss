@@ -92,7 +92,7 @@ button {
 
     border: 0 none;
     border-radius: 2px;
-    @include material-shadow(1);
+    box-shadow: material-shadow(1);
 }
 
 .rounded {
