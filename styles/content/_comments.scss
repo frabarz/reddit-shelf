@@ -5,6 +5,16 @@
     .sitetable {
         padding-top: 14px;
     }
+
+    .gold-accent.comment-visits-box {
+        display: block;
+        margin: 10px 0 10px 32px;
+        max-width: initial;
+
+        text-align: center;
+
+        border-right: 0 none;
+    }
 }
 
 .panestack-title {
@@ -76,8 +86,8 @@
                 border-top: $height solid $color-downvote;
             }
         }
-            }
-        }
+    }
+}
 
 .thing.comment {
     margin: 0 0 14px;

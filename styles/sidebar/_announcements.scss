@@ -119,6 +119,12 @@ body > .content {
         max-width: 1%;
         opacity: 0.1;
     }
+
+    a {
+        color: $color-highlight;
+        text-decoration: underline;
+        text-decoration-style: dashed;
+    }
 }
 
 }
