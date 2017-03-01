@@ -3,6 +3,41 @@
 	background-color: #fdfdfd;
 }
 
-.combined-search-page .content {
+.combined-search-page > .content {
 	margin-right: $sidebar-margin !important;
+}
+
+.search-page {
+    #search { margin-top: 0; }
+
+    .search-result-group {
+        position: relative;
+        z-index: 1;
+
+        width: auto;
+        max-width: initial;
+
+        > header {
+            margin: 0 0 1em;
+
+            > span {
+                margin: 0 0 10px;
+                font-size: 20px;
+                color: $color-highlight;
+            }
+        }
+
+        .linkflairlabel {
+            display: block;
+            margin-bottom: 4px;
+            padding: 0;
+
+            line-height: 1;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            border: 0 none;
+            background: transparent;
+        }
+    }
 }

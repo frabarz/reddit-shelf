@@ -1,6 +1,6 @@
 // Development environment
 $ENV: "development" !default;
-// $ENV: "production";
+$ENV: "production";
 
 // GLOBAL VARIABLES
 @import "global/urls";
@@ -19,7 +19,6 @@ $ENV: "development" !default;
 @import "modules/thing";
 @import "modules/usertext";
 @import "modules/raisedbox";
-@import "modules/search";
 @import "modules/flairselector";
 @import "modules/thumbnail";
 @import "modules/linefield";
@@ -34,6 +33,7 @@ $ENV: "development" !default;
 @import "content/skeleton";
 @import "content/linklisting";
 @import "content/comments";
+@import "content/redditlink";
 @import "content/pagesearch";
 @import "content/pagesettings";
 @import "content/pagesubmit";
@@ -42,6 +42,7 @@ $ENV: "development" !default;
 
 // SIDEBAR
 @import "sidebar/skeleton";
+@import "sidebar/search";
 @import "sidebar/submit";
 @import "sidebar/titlebox";
 @import "sidebar/content";
@@ -51,7 +52,9 @@ $ENV: "development" !default;
 @import "footer";
 
 // SPECIFIC CODE
+@import "drrp/header";
 @import "drrp/sidebar";
+@import "drrp/content";
 @import "drrp/flairs";
 @import "drrp/trials";
 // @import "drrp/miraikikan";

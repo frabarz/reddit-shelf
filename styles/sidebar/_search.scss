@@ -1,0 +1,124 @@
+.side {
+    #search {
+        input[type=text] {
+            width: 300px;
+
+            line-height: 18px;
+            font-family: inherit;
+
+            border: 1px solid $color-border;
+            background: $color-searchinput;
+
+            &:focus {
+                background: #fff;
+            }
+        }
+
+        input[type=submit] {
+            margin-left: -33px;
+            height: 30px;
+            width: 32px;
+
+            background-image: $url-assetsdrrp;
+            background-position: -235px 0;
+            background-size: 295px;
+            border: none;
+            border-left: 1px solid $color-border;
+            border-radius: 0;
+            box-shadow: none !important;
+            transition-property: none;
+
+            &:hover {
+                background-color: rgba(#999, .2);
+                background-position: -265px 0;
+            }
+        }
+    }
+
+    #searchexpando {
+        $arrow-size: 6px;
+        $color-border: mix(#000, $color-searchexpando, 10%);
+
+        position: relative;
+
+        margin: 0 0 15px;
+        padding: 0;
+
+        color: #37474F;
+        background: $color-searchexpando;
+        border: 1px solid $color-border;
+        border-top: 0 none;
+        border-radius: 0;
+
+        &::before,
+        &::after {
+            content: " ";
+
+            position: absolute;
+            bottom: 100%;
+            left: $arrow-size + 10px;
+
+            height: 0;
+            width: 0;
+
+            border: solid transparent;
+
+            pointer-events: none;
+        }
+
+        &::after {
+            margin-left: -1 * $arrow-size;
+            border-width: $arrow-size;
+            border-bottom-color: $color-searchexpando;
+        }
+
+        &::before {
+            margin-left: -1 * $arrow-size - 2px;
+            border-width: $arrow-size + 2;
+            border-bottom-color: $color-border;
+        }
+
+        label {
+            display: block;
+            padding: 10px;
+
+            font-size: 12px;
+            line-height: 1.5em;
+
+            cursor: pointer;
+            transition: all .1s ease;
+        }
+
+        input[type="checkbox"] {
+            margin-bottom: 0;
+            vertical-align: top;
+        }
+
+        p {
+            margin: 0;
+            padding: 0 10px 1em;
+            font-size: .8em;
+        }
+
+        br {
+            /* RES: Style for the added options */
+            display: none;
+
+            ~ label {
+                float: left;
+                padding-top: 0;
+                box-sizing: border-box;
+                width: 50%;
+
+                select {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+
+        #moresearchinfo {
+            clear: left;
+        }
+    }
+}
