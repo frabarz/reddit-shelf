@@ -1,0 +1,19 @@
+// This is the *RECENTLY VISITED* part of the sidebar
+
+.thing.reddit-link {
+    .entry {
+        margin-left: 20px;
+    }
+
+    .linkflairlabel {
+        display: block;
+        padding: 0;
+        max-width: initial;
+
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        background: transparent;
+        border: 0 none;
+    }
+}

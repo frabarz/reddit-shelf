@@ -41,20 +41,13 @@
     }
 }
 
-.thing.comment {
+.thing.comment,
+.thing.reddit-link {
     position: relative;
-
-    margin: 0 0 14px;
-    padding: 0 0 0 $comment-paddingleft;
-
-    background: transparent;
 
     .midcol {
         position: absolute;
         left: 0;
-
-        margin: ($comment-taglineheight + 8px) 0 0;
-        width: $comment-paddingleft;
 
         .arrow {
             $width: 8px;
@@ -83,6 +76,18 @@
                 border-top: $height solid $color-downvote;
             }
         }
+            }
+        }
+
+.thing.comment {
+    margin: 0 0 14px;
+    padding: 0 0 0 $comment-paddingleft;
+
+    background: transparent;
+
+    .midcol {
+        margin: ($comment-taglineheight + 8px) 0 0;
+        width: $comment-paddingleft;
     }
 
     .entry {
@@ -223,7 +228,7 @@
     > .entry .usertext,
     > .entry .flat-list,
     > .entry .expand + em {
-        background: #fff;
+        background-color: rgba(#fff, 0.5);
         border-style: solid;
         border-color: $color-border;
     }

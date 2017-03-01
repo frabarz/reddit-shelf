@@ -1,16 +1,21 @@
-.link {
-    &.linkflair-dndespair   { background-image: $url-linkdndespair; }
-    &.linkflair-dailylife   { background-image: $url-linkdailylife; }
-    &.linkflair-insertcoin  { background-image: $url-linkinsertcoin; }
-    &.linkflair-monoescape  { background-image: $url-linkmonoescape; }
-    &.linkflair-monologue   { background-image: $url-linkmonologue; }
-    &.linkflair-royale      { background-image: $url-linkroyale; }
-    &.linkflair-sidetrial   { background-image: $url-linksidetrial; }
-    &.linkflair-survivor    { background-image: $url-linksurvivor; }
-    &.linkflair-trial       { background-image: $url-linktrial; }
-    &.linkflair-trialawards { background-image: $url-linktrialawards; }
-    &.linkflair-whodunnit   { background-image: $url-linkwhodunnit; }
-    &.linkflair-writingtips { background-image: $url-linkwriting; }
+.linklisting {
+    [class*='linkflair-'] {
+        background-position: 100.2% -1px;
+        background-repeat: no-repeat;
+    }
+
+    .linkflair-dndespair   { background-image: $url-linkdndespair; }
+    .linkflair-dailylife   { background-image: $url-linkdailylife; }
+    .linkflair-insertcoin  { background-image: $url-linkinsertcoin; }
+    .linkflair-monoescape  { background-image: $url-linkmonoescape; }
+    .linkflair-monologue   { background-image: $url-linkmonologue; }
+    .linkflair-royale      { background-image: $url-linkroyale; }
+    .linkflair-sidetrial   { background-image: $url-linksidetrial; }
+    .linkflair-survivor    { background-image: $url-linksurvivor; }
+    .linkflair-trial       { background-image: $url-linktrial; }
+    .linkflair-trialawards { background-image: $url-linktrialawards; }
+    .linkflair-whodunnit   { background-image: $url-linkwhodunnit; }
+    .linkflair-writingtips { background-image: $url-linkwriting; }
 
     [lang=ft] &:not(.linkflair-trial),
     [lang=fs] &:not(.linkflair-sidetrial),
