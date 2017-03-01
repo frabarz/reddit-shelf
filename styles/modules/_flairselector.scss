@@ -1,97 +1,63 @@
 .flairselector {
-    /*margin-left: -175px;*/
-    padding: 20px 25px!important;
+    padding: 15px !important;
 
-    border: none;
+    border: 1px solid $color-border !important;
     border-radius: 0;
-    box-shadow: 0 0 16px rgba(#000, .12);
-
-    .linklisting & {
-        position: absolute;
-        top: 0;
-        right: auto;
-        bottom: auto;
-        left: 100%;
-
-        margin: 38px 14px 0 0;
-        width: 300px!important;
-    }
-
-    .side & {
-        position: fixed;
-        top: 20%!important;
-        left: 50%!important;
-
-        width: 350px!important;
-    }
+    box-shadow: material-shadow(2);
 
     &.drop-choices.active {
-        border: 1px solid #e2e2e2;
+        display: flex;
+        flex-direction: column;
     }
 
     h2 {
-        margin-bottom: 4px;
+        flex: 0 0;
+        margin-bottom: 10px;
 
-        text-align: left;
         font-size: 14px;
         font-weight: bold;
         text-transform: uppercase;
 
-        color: #24a0ed;
         background: transparent;
     }
 
-    form {
-        padding-top: 12px;
-        border-top: 1px solid #F7F7F7;
+    .flairoptionpane {
+        flex: 1 1;
+        max-height: initial !important;
 
-        .flairselection {
-            text-align: left;
+        ul {
+            display: block;
+            width: initial !important;
+            max-width: initial;
+            white-space: normal;
 
-            &:before {
-                display: block;
-                content: "Selected Flair:";
-                color: #738491;
-            }
-
-            .linkflair a.title {
-                font-size: 18px !important;
-                opacity: 100 !important;
-                color: #24a0ed !important;
-                cursor: default;
-            }
-
-            .flairremove {
-                padding: 4px 0;
-                margin-bottom: 8px;
-                visibility: hidden;
-                display: block !important;
-
-                a {
-                    visibility: visible;
-                    opacity: 100 !important;
-                    color: #24a0ed !important;
-                    margin-left: -4px;
-                    text-transform: capitalize;
-
-                    // &:first-letter {
-                    //     text-transform: capitalize;
-                    // }
-
-                    &:hover {
-                        text-decoration: underline!important
-                    }
-                }
+            li {
+                width: auto !important;
+                padding: 0;
             }
         }
     }
 
-    li.selected {
-        border: none;
-        background-color: transparent;
+    form {
+        flex: 0 0;
+
+        padding: 10px 0;
+
+        background: #ccc;
+        border-top: 1px solid $color-border;
+        border-radius: 2px;
+
+        .flairselection {
+            position: relative;
+        }
+
+        input {
+            font-size: 14px;
+        }
     }
 
     .linkflair {
+        overflow: hidden;
         text-align: left;
         padding: 0;
     }
@@ -107,25 +73,8 @@
         opacity: 100 !important;
     }
 
-    img {
-        position: relative;
-        left: 50%;
-        margin-left: -9px;
-        opacity: .5;
-    }
-
     .error {
-        text-align: left;
-
-        // &:first-letter {
-        //     text-transform: capitalize;
-        // }
-
-        &:after {
-            display: block;
-            color: #b3b3b3;
-            content: "Go to /r/.../about/flair";
-        }
+        display: block;
     }
 
     .customizer,
@@ -135,46 +84,144 @@
     }
 }
 
+.titlebox .flairselector {
+    position: fixed;
+    top: 0 !important;
+    right: 314px !important;
+    bottom: 0 !important;
+    left: auto !important;
 
+    margin: auto;
+    width: 550px !important;
+    height: 350px !important;
 
-.flairoptionpane {
-    max-height: 250px;
-    text-align: left;
-
-
-    ul {
-        display: block;
-        width: initial !important;
-        max-width: initial;
-        white-space: normal;
-
-        li {
+    li {
+        &.flairsample-left {
             display: inline-block !important;
-            padding: 0 !important;
-            width: 50%;
-            overflow: hidden;
+            vertical-align: bottom;
+
+            margin: 1px;
+            padding: 0 4px;
+            width: auto;
+            height: 38px;
+
+            line-height: 38px;
+            text-align: center !important;
+
+            border-radius: 2px;
+        }
+
+        &.selected {
+            border: 1px solid mix($color-highlight, #fff, 60%);
+            background-color: mix($color-highlight, #fff, 40%);
+        }
+
+        .flair {
+            margin: 0;
+            vertical-align: bottom;
+        }
+
+        .author,
+        .userattrs {
+            display: none;
         }
     }
 
-    span.linkflairlabel {
-        margin-left: 2px;
-        margin-right: 2px;
-        float: none;
-    }
+    .flairselection {
+        margin: 0;
+        padding: 0 14px 20px;
 
-    a.title {
-        display: none !important;
+        text-align: center;
+
+        .flair {
+            margin-right: 5px;
+        }
+
+        .author {
+            position: relative;
+            display: inline-block;
+            vertical-align: bottom;
+
+            margin: 0;
+            padding: 0 8px !important;
+
+            line-height: $comment-taglineheight;
+            font-family: $font-arial;
+            font-size: 14px;
+            font-weight: bold;
+
+            color: $color-highlight;
+            background: #fff;
+            border: 1px solid $color-border;
+
+            &::before {
+                content: 'u/';
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -11px;
+                left: -1px;
+                border: 1px solid $color-border;
+                width: 110px;
+                height: 10px;
+                background: #ffffff;
+                border-width: 1px 0 0 1px;
+            }
+        }
+
+        .flairremove {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+            font-size: 14px;
+        }
     }
 }
 
-.flairoptionpane ul li .linkflair:hover,
-.flairselector li:hover {
-    background-color: #F5F8F9;
-    border: 0 solid;
-}
+.linklisting .flairselector {
+    position: absolute;
+    top: auto !important;
+    bottom: 0;
+    left: auto !important;
 
-.flairselector li a,
-.flairselector form .flairselection a.author {
-    color: #738491!important;
-    font-size: 11px;
+    margin: 0 0 -1px 60px;
+    width: 200px !important;
+    min-width: 300px;
+
+    transform: translateY(50%);
+
+    .linkflair {
+        margin-bottom: 2px;
+        padding: 4px;
+
+        background-position: right center;
+        border: 1px solid $color-border;
+    }
+
+    .flairoptionpane {
+        span.linkflairlabel {
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+    }
+
+    form {
+        .flairselection {
+            margin: 0 15px;
+
+            .linkflair a.title {
+                font-size: 18px !important;
+                opacity: 100 !important;
+                color: #24a0ed !important;
+                cursor: default;
+            }
+        }
+
+        .flairremove {
+            line-height: 30px;
+        }
+    }
 }

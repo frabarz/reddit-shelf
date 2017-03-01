@@ -8,8 +8,6 @@ $DEVELOPMENT: $ENV == "development";
     $url-logotransparent: url(/images/logo_010.png);
     $url-logosolid: url(/images/logo.png);
 
-    $url-flairs: url(/images/flairs.png);
-
     $url-btndiscord: url(/images/btn-discord.png);
 
     $url-assets: url(https://b.thumbs.redditmedia.com/5_zGRCZTF6dAblNoyEERQvBoWrzMd9pl0mXvwA8gVGg.png);
@@ -17,6 +15,8 @@ $DEVELOPMENT: $ENV == "development";
     $url-assetsdrrp: url(/images/assets_drrp.png);
     $url-announcementbg: url(/images/hud.png);
 }
+
+$url-flairs: conditional-url('flairs');
 
 $url-iconsoffsite: conditional-url('icons-offsite');
 $url-browsers: conditional-url('browsers');
