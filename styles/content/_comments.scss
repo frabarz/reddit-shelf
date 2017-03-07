@@ -310,6 +310,20 @@
         margin-top: 20px;
         padding-top: 0;
 
+        &::before {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            width: 40%;
+            height: 1px;
+
+            background: linear-gradient(to right, transparent, $color-border);
+        }
+
+
         &:first-child {
             margin-top: 0;
         }
@@ -330,6 +344,11 @@
             .flair {
                 display: none;
             }
+        }
+
+        .parent,
+        .entry .tagline {
+            border-right: 1px solid $color-border;
         }
 
         .entry .usertext {
