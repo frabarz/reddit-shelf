@@ -111,7 +111,7 @@ body > .content {
 
         color: $color-headerbg;
 
-        transition: max-width 0.15s ease;
+        transition: all 0.15s 0.2s ease;
         pointer-events: none;
     }
 
