@@ -98,3 +98,22 @@ button {
 .rounded {
     border-radius: 0;
 }
+
+a[href$="#spoiler"],
+a[href$="/s"],
+a[href$="#s"]{
+    background-color: #000;
+    color: #000 !important;
+    transition: color 0.1s 0s linear;
+
+    &::selection {
+        color: #000;
+        background-color: #000;
+    }
+
+    &:hover{
+        color: #fff !important;
+        text-decoration: none;
+        transition-delay: 1s;
+    }
+}
