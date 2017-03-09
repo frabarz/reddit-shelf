@@ -54,6 +54,7 @@
 .thing.comment,
 .thing.reddit-link {
     position: relative;
+    overflow: visible !important;
 
     .midcol {
         position: absolute;
@@ -90,10 +91,14 @@
 }
 
 .thing.comment {
-    margin: 0 0 14px;
-    padding: 0 0 0 $comment-paddingleft;
+    body .content & {
+        // Specificity thanks to RES
+        margin: 0 0 14px !important;
+        padding: 0 0 0 $comment-paddingleft !important;
 
-    background: transparent;
+        background: transparent !important;
+        border: 0 none !important;
+    }
 
     .midcol {
         margin: ($comment-taglineheight + 8px) 0 0;
@@ -102,6 +107,7 @@
 
     .entry {
         overflow: visible;
+        padding: 0;
 
         .md .RESUserTag {
             display: none;
@@ -211,12 +217,13 @@
         border-width: 0 0 1px 1px;
     }
 
-    .child {
+    body & div.child {
+        // Specificity thanks to RES
         margin-top: 0;
         margin-left: 0;
 
-        border: 0 solid $color-border;
-        border-width: 0 0 0 1px;
+        border: 0 none;
+        border-left: 1px solid $color-border !important;
         background: rgba(#fff, .15);
     }
 
