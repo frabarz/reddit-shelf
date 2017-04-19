@@ -1,14 +1,13 @@
-public/
+.vscode/
+build/
 images/
-resources/
 node_modules/
+resources/
 
 yarn.lock
 
 *.html
 *.json
-*.js
+*.py
 
 flairs.tab
-_dev*
-_special*
