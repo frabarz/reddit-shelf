@@ -3,13 +3,32 @@
     top: 25px;
     left: 0;
     max-height: $header-height - (15px * 2);
-    margin: 15px;
+
+    &::before {
+        content: attr(title);
+
+        position: absolute;
+        top: 0;
+        left: 90%;
+
+        display: block;
+        padding: 0.5em;
+        white-space: nowrap;
+
+        color: #fff;
+        background: #111;
+        border-radius: 2px;
+    }
 }
 
 #header-img {
     display: block;
+    margin: 15px 10px 0;
+
     width: auto;
-    max-height: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: $header-height - 16px;
 
     &.default-header {
         display: none;

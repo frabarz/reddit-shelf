@@ -1,12 +1,21 @@
 .fancy-toggle-button {
     .add,
     .remove {
-        padding: .2em 0;
+        line-height: 24px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
 
-        text-transform: capitalize;
-
-        background: #3c0;
+        border: 1px solid $color-border;
         border-radius: 0;
+    }
+
+    .add {
+        background: #090;
+    }
+
+    .remove {
+        background: #900;
     }
 
     .option.active {
