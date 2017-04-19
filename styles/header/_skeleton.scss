@@ -4,10 +4,6 @@ $gradient-bright: linear-gradient(to right, $color-headerbg, mix($color-headerbg
 
 #header {
     border: none;
-    // background: #fff center/cover;
-    // background-image: $gradient-watercolor1, $gradient-watercolor2;
-    background: $color-headerbg $url-logotransparent center/cover;
-    background-image: $url-logotransparent, $gradient-bright;
     margin-bottom: $header-bottomspace;
 }
 

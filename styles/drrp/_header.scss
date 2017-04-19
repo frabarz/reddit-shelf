@@ -1,3 +1,8 @@
+#header {
+    background: $color-headerbg $url-logo-drtransparent center/cover;
+    background-image: $url-logo-drtransparent, $gradient-bright;
+}
+
 #header-bottom-left {
     .pagename {
         bottom: -13px;
@@ -16,7 +21,7 @@
 
         text-indent: -300px;
 
-        background: $url-logosolid no-repeat center top/#{contain};
+        background: $url-logo no-repeat center top/#{contain};
 
         image-rendering: -webkit-optimize-contrast;
         image-rendering: -moz-crisp-edges;
