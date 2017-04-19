@@ -36,10 +36,9 @@
 	@include text-stroke(mix($color, #000, 25%));
 }
 
-/*
- * COLOR CONTRAST FOR TEXT
- * https://codepen.io/Niklan/pen/ZpAdNx
- */
+
+// COLOR CONTRAST FOR TEXT
+// https://codepen.io/Niklan/pen/ZpAdNx
 @function color-contrast($color, $dark: #000, $light: #fff) {
 	@if $color == null {
 		@return null;

@@ -1,4 +1,6 @@
 #header-bottom-right {
+    $color-bgcontrast: color-contrast($color-headerbar);
+
     position: static;
     display: block;
 
@@ -22,11 +24,11 @@
         position: static;
         display: inline-block;
         vertical-align: top;
-        color: color-contrast($color-headerbar);
+        color: $color-bgcontrast;
     }
 
     a {
-        color: mix(color-contrast($color-headerbar), rgb(127, 127, 127), 50%);
+        color: mix($color-bgcontrast, #808080, 50%);
     }
 
     .loggedin & .user {
@@ -36,7 +38,7 @@
         line-height: 29px;
         font-size: 14px;
 
-        background: mix($color-headerbar, #fff, 75%);
+        background: mix($color-headerbar, $color-bgcontrast, 75%);
         border-radius: 20px;
     }
 

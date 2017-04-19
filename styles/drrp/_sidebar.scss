@@ -76,7 +76,7 @@ a[href="#countdown"] {
         list-style: none;
 
         a {
-            $this-color: darken(#8cfc2e, 30%);
+            $this-color: $color-sidebuttons;
             $this-bgcolor: mix($this-color, $color-background, 50%);
 
             display: block;
@@ -88,7 +88,7 @@ a[href="#countdown"] {
 
             color: darken($this-color, 10%);
             background: $this-bgcolor;
-            border: 1px solid $this-color;
+            border: 1px solid $color-border;
             border-radius: 2px;
         }
     }

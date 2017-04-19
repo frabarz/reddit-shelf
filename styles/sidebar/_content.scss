@@ -62,7 +62,7 @@
                 padding: 10px 0 10px 26px;
                 min-height: 23px;
 
-                border-top: 2px dotted $color-bluegray;
+                border-top: 2px dotted $color-bgcontrast;
 
                 counter-increment: item;
 
@@ -83,7 +83,7 @@
                     font-weight: bold;
 
                     color: $color-background;
-                    @include text-stroke(#000);
+                    @include text-stroke($color-bgcontrast);
                 }
             }
 

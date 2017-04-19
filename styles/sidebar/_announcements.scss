@@ -22,7 +22,7 @@ body > .content {
     font-size: 16px;
     white-space: nowrap;
 
-    color: #000;
+    color: $color-bgcontrast;
     background: $color-searchinput;
     border: 0 solid $color-border;
     border-width: 1px 1px 1px 0;

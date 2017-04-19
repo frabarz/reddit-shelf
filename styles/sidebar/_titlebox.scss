@@ -1,5 +1,7 @@
 .subscribers,
 .users-online {
+    $local-contrast: color-contrast($color-background, #263238, #CFD8DC);
+
     display: inline-block;
     width: 148px;
     margin-bottom: 0;
@@ -9,9 +11,9 @@
     font-size: 13px;
     text-align: right;
 
-    color: #616f77;
-    background: rgba(#000, .05);
-    border: 1px solid $color-sideborders;
+    color: $local-contrast;
+    background: rgba($local-contrast, 0.1);
+    border: 1px solid $color-border;
 
     .number {
         display: block;
@@ -48,14 +50,16 @@
     form.toggle,
     .leavemoderator,
     .tagline {
+        $local-contrast: color-contrast($color-background, #263238, #CFD8DC);
+
         padding: 6px 10px;
 
         line-height: 16px;
         font-size: 11px;
         font-family: $font-segoe;
 
-        background: rgba(255,255,255,.4);
-        border: 1px solid $color-sideborders;
+        background: rgba($local-contrast, .2);
+        border: 1px solid $color-border;
         border-top: 0 none;
     }
 
