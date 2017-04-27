@@ -1,35 +1,36 @@
+// DEFAULT COLORS
 $color-upvote: #FF8b60;
 $color-downvote: #9494FF;
 $color-pinkblood: #de007b;
 
 $color-bluegray: #607D8B;
+$color-bluegray-800: #37474F;
 
-$color-a: #ff9900;
-$color-b: #424242;
-$color-c: #e9e9e9;
-$color-d: #bcbcbc;
-$color-e: #3299bb;
+// DEFAULTS
+$color-border: rgba(#000, .3);
 
-$color-background: mix($color-bluegray, #fff, 20%);
-// $color-background: #263238;
-$color-bgcontrast: color-contrast($color-background);
+// BACKGROUNDS
+$color-body-bg: mix(#CFD8DC, #E1F5FE);
+$color-header-bg: $color-pinkblood;
+$color-sidebar-bg: #ECEFF1;
+$color-thing-bg: lighten(#ECEFF1, 10%);
 
-$color-border: rgba($color-bgcontrast, .3);
+// HEADER
+$color-header-mainbar: rgba($color-header-bg, .2);
 
-$color-headerbg: #145D85;
-$color-headerbg: $color-pinkblood;
-$color-headerbar: rgba($color-headerbg, .2);
+// SIDEBAR
+$color-sidebar-border: $color-border;
+$color-sidebar-highlight: $color-pinkblood;
+$color-sidebar-expando: mix($color-bluegray, #fff, 80%);
 
-$color-bgthing: mix($color-background, #fff, 50%);
-$color-searchinput: #ECEFF1;
-$color-searchexpando: mix($color-bluegray, #fff, 80%);
-
-$color-sideheaderbg: mix($color-bluegray, #fff, 50%);
-
-$color-sideborders: $color-border;
-
+// LINKLISTING
 $color-linksticky: #2E6E02;
 $color-linkpromoted: #c90;
 
-$color-highlight: #224B7D;
-$color-sidebuttons: $color-pinkblood;
+// COMMENTS
+$color-content-base: #036;
+
+// CONTRASTS
+$color-body-bg-contrast: color-contrast($color-body-bg);
+$color-header-bg-contrast: color-contrast($color-header-bg);
+$color-thing-bg-contrast: color-contrast($color-thing-bg);

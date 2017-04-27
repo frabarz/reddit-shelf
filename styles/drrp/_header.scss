@@ -1,5 +1,9 @@
+$gradient-watercolor1: linear-gradient(to right top, rgba(#fc0, 0.2), transparent, rgba(green, 0.3));
+$gradient-watercolor2: linear-gradient(to right bottom, rgba(pink, 0.3), transparent, rgba(pink, 0.5));
+$gradient-bright: linear-gradient(to right, $color-header-bg, mix($color-header-bg, #000, 60%));
+
 #header {
-    background: $color-headerbg $url-logo-drtransparent center/cover;
+    background: $color-header-bg $url-logo-drtransparent center/cover;
     background-image: $url-logo-drtransparent, $gradient-bright;
 }
 

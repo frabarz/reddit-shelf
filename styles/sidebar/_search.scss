@@ -7,7 +7,7 @@
             font-family: inherit;
 
             border: 1px solid $color-border;
-            background: $color-searchinput;
+            background: $color-sidebar-bg;
 
             &:focus {
                 background: #fff;
@@ -37,7 +37,7 @@
 
     #searchexpando {
         $arrow-size: 6px;
-        $color-border: mix(#000, $color-searchexpando, 10%);
+        $color-border: mix(#000, $color-sidebar-expando, 10%);
 
         position: relative;
 
@@ -45,7 +45,7 @@
         padding: 0;
 
         color: #37474F;
-        background: $color-searchexpando;
+        background: $color-sidebar-expando;
         border: 1px solid $color-border;
         border-top: 0 none;
         border-radius: 0;
@@ -69,7 +69,7 @@
         &::after {
             margin-left: -1 * $arrow-size;
             border-width: $arrow-size;
-            border-bottom-color: $color-searchexpando;
+            border-bottom-color: $color-sidebar-expando;
         }
 
         &::before {

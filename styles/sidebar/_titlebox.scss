@@ -1,6 +1,6 @@
 .subscribers,
 .users-online {
-    $local-contrast: color-contrast($color-background, #263238, #CFD8DC);
+    $local-contrast: color-contrast($color-body-bg, #263238, #CFD8DC);
 
     display: inline-block;
     width: 148px;
@@ -50,7 +50,7 @@
     form.toggle,
     .leavemoderator,
     .tagline {
-        $local-contrast: color-contrast($color-background, #263238, #CFD8DC);
+        $local-contrast: color-contrast($color-body-bg, #263238, #CFD8DC);
 
         padding: 6px 10px;
 
@@ -121,7 +121,7 @@
         text-align: right;
 
         color: transparent;
-        border-bottom: 1px solid $color-sideborders;
+        border-bottom: 1px solid $color-sidebar-border;
 
         > .author {
             display: none;
@@ -153,7 +153,7 @@
 
     color: #363636;
     background-color: white;
-    border: 1px solid $color-sideborders;
+    border: 1px solid $color-sidebar-border;
     border-radius: 0;
 
     .date,
@@ -172,7 +172,7 @@
 
     .date {
         float: left;
-        border-right: 1px solid $color-sideborders;
+        border-right: 1px solid $color-sidebar-border;
 
         time {
             line-height: 22px;

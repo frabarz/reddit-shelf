@@ -1,6 +1,7 @@
 .flairselector {
     padding: 15px !important;
 
+    background-color: $color-body-bg;
     border: 1px solid $color-border !important;
     border-radius: 0;
     box-shadow: material-shadow(2);
@@ -113,8 +114,8 @@
         }
 
         &.selected {
-            border: 1px solid mix($color-highlight, #fff, 60%);
-            background-color: mix($color-highlight, #fff, 40%);
+            border: 1px solid mix($color-sidebar-highlight, #fff, 60%);
+            background-color: mix($color-sidebar-highlight, #fff, 40%);
         }
 
         .flair {
@@ -151,7 +152,7 @@
             font-size: 14px;
             font-weight: bold;
 
-            color: $color-highlight;
+            color: $color-content-base;
             background: #fff;
             border: 1px solid $color-border;
 

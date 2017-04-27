@@ -1,7 +1,3 @@
-$gradient-watercolor1: linear-gradient(to right top, rgba(#fc0, 0.2), transparent, rgba(green, 0.3));
-$gradient-watercolor2: linear-gradient(to right bottom, rgba(pink, 0.3), transparent, rgba(pink, 0.5));
-$gradient-bright: linear-gradient(to right, $color-headerbg, mix($color-headerbg, #000, 60%));
-
 #header {
     border: none;
     margin-bottom: $header-bottomspace;

@@ -12,19 +12,19 @@
     text-transform: uppercase;
     white-space: nowrap;
 
-    color: color-contrast($color-headerbg);
-    background: $color-headerbg;
-    border: 2px solid mix($color-headerbg, #000, 60%);
+    color: color-contrast($color-sidebar-highlight);
+    background: $color-sidebar-highlight;
+    border: 2px solid mix($color-sidebar-highlight, $color-body-bg-contrast, 60%);
     border-radius: 18px;
 
     box-sizing: border-box;
 
     &:hover {
-        background: mix($color-headerbg, $color-background, 25%);
+        background: mix($color-sidebar-highlight, $color-body-bg, 25%);
     }
 
     &:active {
-        background: mix($color-headerbg, $color-background, 50%);
+        background: mix($color-sidebar-highlight, $color-body-bg, 50%);
     }
 }
 

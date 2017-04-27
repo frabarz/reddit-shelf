@@ -2,8 +2,8 @@
     $side-over: (-1 * ($sidebar-cellpadding + 1px));
 
     .login-form {
-        color: color-contrast($color-headerbg);
-        background: $color-headerbg;
+        color: color-contrast($color-sidebar-highlight);
+        background: $color-sidebar-highlight;
         border: 1px solid $color-border;
     }
 
@@ -19,7 +19,7 @@
 
         height: 9px;
 
-        background: $color-background;
+        background: $color-body-bg;
         border: 0 solid $color-border;
         border-width: 0 0 1px;
     }
@@ -32,7 +32,7 @@
         text-transform: uppercase;
         white-space: nowrap;
 
-        color: $color-headerbg;
+        color: $color-sidebar-highlight;
 
         a {
             color: inherit;
@@ -62,7 +62,7 @@
                 padding: 10px 0 10px 26px;
                 min-height: 23px;
 
-                border-top: 2px dotted $color-bgcontrast;
+                border-top: 2px dotted $color-body-bg-contrast;
 
                 counter-increment: item;
 
@@ -82,13 +82,18 @@
                     font-family: $font-verdana;
                     font-weight: bold;
 
-                    color: $color-background;
-                    @include text-stroke($color-bgcontrast);
+                    color: $color-body-bg;
+                    @include text-stroke($color-body-bg-contrast);
                 }
             }
 
             p {
                 margin: 0;
+            }
+
+            a {
+                color: mix($color-sidebar-highlight, $color-body-bg-contrast, 75%);
+                text-decoration: underline;
             }
         }
 
@@ -96,7 +101,7 @@
             margin: $sidebar-cellpadding $side-over 0;
             height: $sidebar-cellpadding;
 
-            background: $color-background;
+            background: $color-body-bg;
             border: 0 solid $color-border;
             border-width: 1px 0;
         }
@@ -149,7 +154,7 @@
                     font-family: $font-segoe;
 
                     color: #fff;
-                    background: $color-highlight;
+                    background: mix($color-sidebar-highlight, $color-body-bg-contrast);
                     border-radius: 2px;
                 }
             }

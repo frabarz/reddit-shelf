@@ -138,7 +138,7 @@
                 background: #ccc;
 
                 &:hover {
-                    background: mix(#ccc, $color-highlight, 50%);
+                    background: mix($color-content-base, $color-body-bg);
                 }
             }
         }

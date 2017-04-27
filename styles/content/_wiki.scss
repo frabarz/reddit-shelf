@@ -12,7 +12,7 @@
 
         text-align: center;
 
-        background: mix($color-highlight, #fff, 10%);
+        background: mix($color-header-bg, $color-body-bg, 15%);
         border-top: 1px solid $color-border;
         border-right: 1px solid $color-border;
 
@@ -77,7 +77,7 @@
         > ul {
             margin-right: -15px;
             padding: 10px 14px;
-            background: mix($color-highlight, #fff, 10%);
+            background: mix($color-content-base, #fff, 10%);
             border-color: $color-border;
 
             @media (max-width: 980px) {
@@ -135,7 +135,7 @@
         margin: 0 -14px -10px;
         padding: 10px 14px;
 
-        background: mix($color-highlight, #fff, 10%);
+        background: mix($color-content-base, $color-body-bg-contrast);
         border-top: 1px solid $color-border;
     }
 }

@@ -40,7 +40,7 @@
         line-height: $comment-taglineheight;
         font-size: 14px;
 
-        color: $color-highlight;
+        color: $color-content-base;
         background: #fff;
         border: 1px solid $color-border;
         border-radius: 0 !important;
@@ -72,7 +72,7 @@
             border-top: 0 none;
 
             &.up {
-                border-bottom: $height solid mix($color-background, #000, 50%);
+                border-bottom: $height solid mix($color-body-bg, #000, 50%);
             }
 
             &.upmod {
@@ -80,7 +80,7 @@
             }
 
             &.down {
-                border-top: $height solid mix($color-background, #000, 50%);
+                border-top: $height solid mix($color-body-bg, #000, 50%);
             }
 
             &.downmod {
@@ -96,7 +96,7 @@
         margin: 0 0 14px !important;
         padding: 0 0 0 $comment-paddingleft !important;
 
-        background: transparent !important;
+        background-color: transparent !important;
         border: 0 none !important;
     }
 
@@ -136,7 +136,7 @@
         margin: -1px 0 -1px -1px;
         padding: 0 8px !important;
 
-        color: $color-highlight;
+        color: $color-content-base;
         background: #fff;
         border-width: 1px;
         border-radius: 0 !important;
@@ -340,7 +340,7 @@
 
             line-height: 1.4em;
 
-            color: $color-highlight;
+            color: $color-content-base;
 
             .title {
                 display: block;

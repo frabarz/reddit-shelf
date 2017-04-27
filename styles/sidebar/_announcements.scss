@@ -22,8 +22,8 @@ body > .content {
     font-size: 16px;
     white-space: nowrap;
 
-    color: $color-bgcontrast;
-    background: $color-searchinput;
+    color: $color-body-bg-contrast;
+    background: $color-sidebar-bg;
     border: 0 solid $color-border;
     border-width: 1px 1px 1px 0;
 
@@ -109,7 +109,7 @@ body > .content {
         font-style: italic;
         font-family: $font-verdana;
 
-        color: $color-headerbg;
+        color: $color-header-bg;
 
         transition: all 0.15s 0.2s ease;
         pointer-events: none;
@@ -121,7 +121,7 @@ body > .content {
     }
 
     a {
-        color: $color-highlight;
+        color: mix($color-body-bg-contrast, $color-header-bg);
         text-decoration: underline;
         text-decoration-style: dashed;
     }
