@@ -32,7 +32,7 @@
 }
 
 @mixin nsdhighlight($color) {
-	color: $color;
+	color: $color !important;
 	@include text-stroke(mix($color, #000, 25%));
 }
 

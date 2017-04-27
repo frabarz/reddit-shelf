@@ -2,6 +2,12 @@
     margin-right: $sidebar-margin;
     border-right: 1px solid $color-border;
 
+    > .menuarea,
+    > .infobar {
+        margin: 5px 0 5px $comment-paddingleft;
+        border-right: 0 none !important;
+    }
+
     .sitetable {
         padding-top: 14px;
     }

@@ -17,11 +17,11 @@
     .linkflair-whodunnit   { background-image: $url-linkwhodunnit; }
     .linkflair-writingtips { background-image: $url-linkwriting; }
 
-    [lang=ft] &:not(.linkflair-trial),
-    [lang=fs] &:not(.linkflair-sidetrial),
-    [lang=fw] &:not(.linkflair-whodunnit),
-    [lang=fm] &:not(.linkflair-monologue),
-    [lang=fz] &:not(.linkflair-monoescape) {
+    [lang=ft] & .thing:not(.linkflair-trial),
+    [lang=fs] & .thing:not(.linkflair-sidetrial),
+    [lang=fw] & .thing:not(.linkflair-whodunnit),
+    [lang=fm] & .thing:not(.linkflair-monologue),
+    [lang=fz] & .thing:not(.linkflair-monoescape) {
         display: none;
     }
 }

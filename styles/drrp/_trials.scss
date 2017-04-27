@@ -55,15 +55,15 @@ a[href="#bullet"] {
         width: 10px;
         border-width: 2px 0 2px 2px;
     }
-}
 
-body.red-bullet a[href="#bullet"] {
-    background-color: $bullet-red;
-    color: #fff !important;
-    box-shadow: inset -3px 3px mix($bullet-red, #fff, 75%), inset -2px 5px mix($bullet-red, #fff, 50%);
-
-    &::before {
+    body.red-bullet & {
         background-color: $bullet-red;
+        color: #fff !important;
+        box-shadow: inset -3px 3px mix($bullet-red, #fff, 75%), inset -2px 5px mix($bullet-red, #fff, 50%);
+
+        &::before {
+            background-color: $bullet-red;
+        }
     }
 }
 
