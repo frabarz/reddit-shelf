@@ -2,6 +2,8 @@
 
 A modular theme for subreddits.
 
+**NOTICE**: This theme won't be updated until Reddit's release of the new site template.
+
 This theme contains elements inpired by a few other subreddits, along with some things made on the way.
 
 Feel free to fork it and modify it however you want.
