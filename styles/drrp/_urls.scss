@@ -1,39 +1,38 @@
 $DEVELOPMENT: $ENV == "development";
 
 @function conditional-url($key) {
-    @return if($DEVELOPMENT, url(/images/#{$key}.png?r), url(%%#{$key}%%));
+	@return if($DEVELOPMENT, url(/images/#{$key}.png?r), url(%%#{$key}%%));
 }
 
 @if ($DEVELOPMENT) {
-    $url-btndiscord: url(/images/btn-discord.png);
+	$url-btndiscord: url(/images/btn-discord.png);
 
-    $url-assets: url(https://b.thumbs.redditmedia.com/5_zGRCZTF6dAblNoyEERQvBoWrzMd9pl0mXvwA8gVGg.png);
-    // $hambaga: "//c.thumbs.redditmedia.com/bn09SsTK9ryFj4Nh.png";
-    $url-assetsdrrp: url(/images/assets_drrp.png);
-    $url-announcementbg: url(/images/hud.png);
+	$url-assets: url(https://b.thumbs.redditmedia.com/5_zGRCZTF6dAblNoyEERQvBoWrzMd9pl0mXvwA8gVGg.png);
+	// $hambaga: "//c.thumbs.redditmedia.com/bn09SsTK9ryFj4Nh.png";
+	$url-assetsdrrp: url(/images/assets_drrp.png);
+	$url-announcementbg: url(/images/hud.png);
 }
 
-$url-logo:               conditional-url('logo');
-$url-logo-drtransparent: conditional-url('logo-drtransparent');
-$url-logo-miraikikan:    conditional-url('logo-miraikikan');
-$url-logo-distrust:      conditional-url('logo-distrust');
+$url-logo: conditional-url("logo");
+$url-logo-drtransparent: conditional-url("banner-miraikikan");
+$url-logo-miraikikan: conditional-url("logo-miraikikan");
+$url-logo-distrust: conditional-url("logo-distrust");
 
-$url-flairs: conditional-url('flairs');
+$url-flairs: conditional-url("flairs");
 
-$url-iconsoffsite: conditional-url('icons-offsite');
-$url-browsers:     conditional-url('browsers');
-$url-pixelpattern: conditional-url('pixelpattern');
+$url-iconsoffsite: conditional-url("icons-offsite");
+$url-browsers: conditional-url("browsers");
+$url-pixelpattern: conditional-url("pixelpattern");
 
-$url-linkdndespair:   conditional-url('thumb-dnd');
-$url-linkdailylife:   conditional-url('thumb-dailylife');
-$url-linkinsertcoin:  conditional-url('thumb-interest');
-$url-linkmonoescape:  conditional-url('thumb-monoescape');
-$url-linkmonologue:   conditional-url('thumb-monologue');
-$url-linkroyale:      conditional-url('thumb-royale');
-$url-linksidetrial:   conditional-url('thumb-sidetrial');
-$url-linksurvivor:    conditional-url('thumb-survivor');
-$url-linktrial:       conditional-url('thumb-trial');
-$url-linktrialawards: conditional-url('thumb-awards');
-$url-linkwhodunnit:   conditional-url('thumb-whodunnit');
-$url-linkwriting:     conditional-url('thumb-writing');
-
+$url-linkdndespair: conditional-url("thumb-dnd");
+$url-linkdailylife: conditional-url("thumb-dailylife");
+$url-linkinsertcoin: conditional-url("thumb-interest");
+$url-linkmonoescape: conditional-url("thumb-monoescape");
+$url-linkmonologue: conditional-url("thumb-monologue");
+$url-linkroyale: conditional-url("thumb-royale");
+$url-linksidetrial: conditional-url("thumb-sidetrial");
+$url-linksurvivor: conditional-url("thumb-survivor");
+$url-linktrial: conditional-url("thumb-trial");
+$url-linktrialawards: conditional-url("thumb-awards");
+$url-linkwhodunnit: conditional-url("thumb-whodunnit");
+$url-linkwriting: conditional-url("thumb-writing");

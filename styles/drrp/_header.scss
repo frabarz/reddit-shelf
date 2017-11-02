@@ -2,9 +2,11 @@ $gradient-watercolor1: linear-gradient(to right top, rgba(#fc0, 0.2), transparen
 $gradient-watercolor2: linear-gradient(to right bottom, rgba(pink, 0.3), transparent, rgba(pink, 0.5));
 $gradient-bright: linear-gradient(to right, $color-header-bg, mix($color-header-bg, #000, 60%));
 
+$gradient-diagonal: linear-gradient(to right bottom, #000, mix($color-pinkblood, #2E3338, 75%));
+
 #header {
     background: $color-header-bg $url-logo-drtransparent center/cover;
-    background-image: $url-logo-drtransparent, $gradient-bright;
+    background-image: $url-logo-drtransparent, $gradient-diagonal;
 }
 
 #header-bottom-left {

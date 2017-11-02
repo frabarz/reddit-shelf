@@ -1,14 +1,14 @@
 .side {
-    $padding-top: 0;
+	$padding-top: 0;
 
-    width: 300px;
-    margin: 0;
-    padding: $padding-top $sidebar-cellpadding $sidebar-cellpadding;
+	width: 300px;
+	margin: 0;
+	padding: $padding-top $sidebar-cellpadding $sidebar-cellpadding;
 
-    color: $color-body-bg-contrast;
-    background: $color-body-bg;
+	color: $color-body-bg-contrast;
+	background: $color-body-bg;
 
-    .spacer {
-        margin: 0 0 $sidebar-cellpadding;
-    }
+	.spacer {
+		margin: 0 0 $sidebar-cellpadding;
+	}
 }

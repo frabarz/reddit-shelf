@@ -1,73 +1,77 @@
 body > .content {
-    margin: 0;
+	margin: 0;
 
-    > .spacer {
-        margin: 0;
-    }
+	> .spacer {
+		margin: 0;
+	}
 
-    #noresults {
-        margin: 0;
-        padding: 30px 0;
+	#noresults {
+		margin: 0;
+		padding: 30px 0;
 
-        font-size: 32px;
-        text-align: center;
+		font-size: 32px;
+		text-align: center;
 
-        color: mix($color-body-bg, $color-body-bg-contrast, 85%);
-    }
+		color: mix($color-body-bg, $color-body-bg-contrast, 85%);
+	}
 
-    .md {
-        a,
-        a:visited {
-            color: $color-content-base;
-        }
+	.md {
+		a,
+		a:visited {
+			color: $color-content-base;
+		}
 
-        h1 {
-            margin-left: -14px;
-            padding-top: 10px;
-            padding-left: 14px;
+		a:hover {
+			text-decoration: underline;
+		}
 
-            border-top: 1px solid $color-border;
-        }
+		h1 {
+			margin-left: -14px;
+			padding-top: 10px;
+			padding-left: 14px;
 
-        h1:first-child {
-            padding-top: 0;
-            border: 0 none;
-        }
+			border-top: 1px solid $color-border;
+		}
 
-        hr {
-            margin-left: -14px;
-            height: 1px;
+		h1:first-child {
+			padding-top: 0;
+			border: 0 none;
+		}
 
-            background: $color-border;
-        }
+		hr {
+			margin-left: -14px;
+			height: 1px;
 
-        li > p {
-            margin: 0;
-        }
+			background: $color-border;
+		}
 
-        sup > sup > a {
-            display: inline-block;
-            vertical-align: top;
-            overflow: hidden;
+		li > p {
+			margin: 0;
+		}
 
-            height: 1em;
-            line-height: 1em;
-            max-width: 70px;
+		sup > sup > a {
+			display: inline-block;
+			vertical-align: top;
+			overflow: hidden;
 
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-    }
+			height: 1em;
+			line-height: 1em;
+			max-width: 70px;
+
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
 }
 
 .reddit-infobar.with-icon {
-    &,
-    &.archived-infobar {
-        border-left: 0 none;
+	&,
+	&.archived-infobar {
+		border-left: 0 none;
 
-        &::before {
-            background-color: $color-content-base;
-            border-right: 1px solid #ccc;
-        }
-    }
+		&::before {
+			background-color: $color-content-base;
+			border-right: 1px solid #ccc;
+		}
+	}
 }

@@ -1,229 +1,229 @@
 .flairselector {
-    padding: 15px !important;
+	padding: 15px !important;
 
-    background-color: $color-body-bg;
-    border: 1px solid $color-border !important;
-    border-radius: 0;
-    box-shadow: material-shadow(2);
+	background-color: $color-body-bg;
+	border: 1px solid $color-border !important;
+	border-radius: 0;
+	box-shadow: material-shadow(2);
 
-    &.drop-choices.active {
-        display: flex;
-        flex-direction: column;
-    }
+	&.drop-choices.active {
+		display: flex;
+		flex-direction: column;
+	}
 
-    h2 {
-        flex: 0 0;
-        margin-bottom: 10px;
+	h2 {
+		flex: 0 0;
+		margin-bottom: 10px;
 
-        font-size: 14px;
-        font-weight: bold;
-        text-transform: uppercase;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
 
-        background: transparent;
-    }
+		background: transparent;
+	}
 
-    .flairoptionpane {
-        flex: 1 1;
-        max-height: initial !important;
+	.flairoptionpane {
+		flex: 1 1;
+		max-height: initial !important;
 
-        ul {
-            display: block;
-            float: none !important;
-            width: initial !important;
-            max-width: initial;
-            white-space: normal;
+		ul {
+			display: block;
+			float: none !important;
+			width: initial !important;
+			max-width: initial;
+			white-space: normal;
 
-            li {
-                width: auto !important;
-                padding: 0;
-            }
-        }
-    }
+			li {
+				width: auto !important;
+				padding: 0;
+			}
+		}
+	}
 
-    form {
-        flex: 0 0;
+	form {
+		flex: 0 0;
 
-        padding: 10px 0;
+		padding: 10px 0;
 
-        background: #ccc;
-        border-top: 1px solid $color-border;
-        border-radius: 2px;
+		background: #ccc;
+		border-top: 1px solid $color-border;
+		border-radius: 2px;
 
-        .flairselection {
-            position: relative;
-        }
+		.flairselection {
+			position: relative;
+		}
 
-        input {
-            font-size: 14px;
-        }
-    }
+		input {
+			font-size: 14px;
+		}
+	}
 
-    .linkflair {
-        overflow: hidden;
-        text-align: left;
-        padding: 0;
-    }
+	.linkflair {
+		overflow: hidden;
+		text-align: left;
+		padding: 0;
+	}
 
-    span.linkflairlabel {
-        margin: 1px;
-        line-height: 14px !important;
-    }
+	span.linkflairlabel {
+		margin: 1px;
+		line-height: 14px !important;
+	}
 
-    a.title {
-        line-height: 22px !important;
-        font-size: 18px !important;
-        opacity: 100 !important;
-    }
+	a.title {
+		line-height: 22px !important;
+		font-size: 18px !important;
+		opacity: 100 !important;
+	}
 
-    .error {
-        display: block;
-    }
+	.error {
+		display: block;
+	}
 
-    .customizer,
-    .customizer + button {
-        display: inline-block;
-        vertical-align: middle;
-    }
+	.customizer,
+	.customizer + button {
+		display: inline-block;
+		vertical-align: middle;
+	}
 }
 
 .titlebox .flairselector {
-    position: fixed;
-    top: 0 !important;
-    right: 314px !important;
-    bottom: 0 !important;
-    left: auto !important;
+	position: fixed;
+	top: 0 !important;
+	right: 314px !important;
+	bottom: 0 !important;
+	left: auto !important;
 
-    margin: auto;
-    width: 550px !important;
-    height: 350px !important;
+	margin: auto;
+	width: 550px !important;
+	height: 350px !important;
 
-    li {
-        &.flairsample-left {
-            display: inline-block !important;
-            vertical-align: bottom;
+	li {
+		&.flairsample-left {
+			display: inline-block !important;
+			vertical-align: bottom;
 
-            margin: 1px;
-            padding: 0 4px;
-            width: auto;
-            height: 38px;
+			margin: 1px;
+			padding: 0 4px;
+			width: auto;
+			height: 38px;
 
-            line-height: 38px;
-            text-align: center !important;
+			line-height: 38px;
+			text-align: center !important;
 
-            border-radius: 2px;
-        }
+			border-radius: 2px;
+		}
 
-        &.selected {
-            border: 1px solid mix($color-sidebar-highlight, #fff, 60%);
-            background-color: mix($color-sidebar-highlight, #fff, 40%);
-        }
+		&.selected {
+			border: 1px solid mix($color-sidebar-highlight, #fff, 60%);
+			background-color: mix($color-sidebar-highlight, #fff, 40%);
+		}
 
-        .flair {
-            margin: 0;
-            vertical-align: bottom;
-        }
+		.flair {
+			margin: 0;
+			vertical-align: bottom;
+		}
 
-        .author,
-        .userattrs {
-            display: none;
-        }
-    }
+		.author,
+		.userattrs {
+			display: none;
+		}
+	}
 
-    .flairselection {
-        margin: 0;
-        padding: 0 14px 20px;
+	.flairselection {
+		margin: 0;
+		padding: 0 14px 20px;
 
-        text-align: center;
+		text-align: center;
 
-        .flair {
-            margin-right: 5px;
-        }
+		.flair {
+			margin-right: 5px;
+		}
 
-        .author {
-            position: relative;
-            display: inline-block;
-            vertical-align: bottom;
+		.author {
+			position: relative;
+			display: inline-block;
+			vertical-align: bottom;
 
-            margin: 0;
-            padding: 0 8px !important;
+			margin: 0;
+			padding: 0 8px !important;
 
-            line-height: $comment-taglineheight;
-            font-family: $font-arial;
-            font-size: 14px;
-            font-weight: bold;
+			line-height: $comment-taglineheight;
+			font-family: $font-arial;
+			font-size: 14px;
+			font-weight: bold;
 
-            color: $color-content-base;
-            background: #fff;
-            border: 1px solid $color-border;
+			color: $color-content-base;
+			background: #fff;
+			border: 1px solid $color-border;
 
-            &::before {
-                content: 'u/';
-            }
+			&::before {
+				content: "u/";
+			}
 
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: -11px;
-                left: -1px;
-                border: 1px solid $color-border;
-                width: 110px;
-                height: 10px;
-                background: #ffffff;
-                border-width: 1px 0 0 1px;
-            }
-        }
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -11px;
+				left: -1px;
+				border: 1px solid $color-border;
+				width: 110px;
+				height: 10px;
+				background: #ffffff;
+				border-width: 1px 0 0 1px;
+			}
+		}
 
-        .flairremove {
-            position: absolute;
-            top: 10px;
-            right: 10px;
+		.flairremove {
+			position: absolute;
+			top: 10px;
+			right: 10px;
 
-            font-size: 14px;
-        }
-    }
+			font-size: 14px;
+		}
+	}
 }
 
 .linklisting .flairselector {
-    position: absolute;
-    top: auto !important;
-    bottom: 0;
-    left: auto !important;
+	position: absolute;
+	top: auto !important;
+	bottom: 0;
+	left: auto !important;
 
-    margin: 0 0 -1px 60px;
-    width: 200px !important;
-    min-width: 300px;
+	margin: 0 0 -1px 60px;
+	width: 200px !important;
+	min-width: 300px;
 
-    transform: translateY(50%);
+	transform: translateY(50%);
 
-    .linkflair {
-        margin-bottom: 2px;
-        padding: 4px;
+	.linkflair {
+		margin-bottom: 2px;
+		padding: 4px;
 
-        background-position: right center;
-        border: 1px solid $color-border;
-    }
+		background-position: right center;
+		border: 1px solid $color-border;
+	}
 
-    .flairoptionpane {
-        span.linkflairlabel {
-            margin-left: 2px;
-            margin-right: 2px;
-        }
-    }
+	.flairoptionpane {
+		span.linkflairlabel {
+			margin-left: 2px;
+			margin-right: 2px;
+		}
+	}
 
-    form {
-        .flairselection {
-            margin: 0 15px;
+	form {
+		.flairselection {
+			margin: 0 15px;
 
-            .linkflair a.title {
-                font-size: 18px !important;
-                opacity: 100 !important;
-                color: #24a0ed !important;
-                cursor: default;
-            }
-        }
+			.linkflair a.title {
+				font-size: 18px !important;
+				opacity: 100 !important;
+				color: #24a0ed !important;
+				cursor: default;
+			}
+		}
 
-        .flairremove {
-            line-height: 30px;
-        }
-    }
+		.flairremove {
+			line-height: 30px;
+		}
+	}
 }

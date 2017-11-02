@@ -1,24 +1,24 @@
 @mixin clearfix($side: both) {
-    &::after {
-        content: "";
-        display: table;
-        clear: $side;
-    }
+	&::after {
+		content: "";
+		display: table;
+		clear: $side;
+	}
 }
 
 @function material-shadow($level: 1) {
 	@if $level == 1 {
 		@return 0 1px 3px rgba(#000, 0.12), 0 1px 2px rgba(#000, 0.24);
-	}
+	} 
 	@else if $level == 2 {
 		@return 0 3px 6px rgba(#000, 0.16), 0 3px 6px rgba(#000, 0.23);
-	}
+	} 
 	@else if $level == 3 {
 		@return 0 10px 20px rgba(#000, 0.19), 0 6px 6px rgba(#000, 0.23);
-	}
+	} 
 	@else if $level == 4 {
 		@return 0 14px 28px rgba(#000, 0.25), 0 10px 10px rgba(#000, 0.22);
-	}
+	} 
 	@else {
 		@return 0 19px 38px rgba(#000, 0.30), 0 15px 12px rgba(#000, 0.22);
 	}
@@ -36,13 +36,12 @@
 	@include text-stroke(mix($color, #000, 25%));
 }
 
-
 // COLOR CONTRAST FOR TEXT
 // https://codepen.io/Niklan/pen/ZpAdNx
 @function color-contrast($color, $dark: #000, $light: #fff) {
 	@if $color == null {
 		@return null;
-	}
+	} 
 	@else {
 		$yiq: (red($color) * 299 + green($color) * 587 + blue($color) * 114) / 1000;
 		@return if($yiq >= 128, $dark, $light);

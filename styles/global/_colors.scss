@@ -1,34 +1,34 @@
 // DEFAULT COLORS
-$color-upvote: #FF8b60;
-$color-downvote: #9494FF;
-$color-pinkblood: #de007b;
+$color-upvote: #ff8b60;
+$color-downvote: #9494ff;
+$color-pinkblood: mix(#09c, #666, 50%);
 
-$color-bluegray: #607D8B;
-$color-bluegray-800: #37474F;
+$color-bluegray: #607d8b;
+$color-bluegray-800: #37474f;
 
 // DEFAULTS
-$color-border: rgba(#000, .3);
+$color-border: rgba(#000, 0.3);
 
 // BACKGROUNDS
-$color-body-bg: mix(#CFD8DC, #E1F5FE);
-$color-header-bg: $color-pinkblood;
-$color-sidebar-bg: #ECEFF1;
-$color-thing-bg: lighten(#ECEFF1, 10%);
+$color-body-bg: mix(#cfd8dc, #e1f5fe);
+$color-header-bg: #2e3338;
+$color-sidebar-bg: #eceff1;
+$color-thing-bg: lighten(#eceff1, 10%);
 
 // HEADER
-$color-header-mainbar: rgba($color-header-bg, .2);
+$color-header-mainbar: rgba($color-header-bg, 0.2);
 
 // SIDEBAR
 $color-sidebar-border: $color-border;
-$color-sidebar-highlight: $color-pinkblood;
+$color-sidebar-highlight: mix($color-pinkblood, #000, 80%);
 $color-sidebar-expando: mix($color-bluegray, #fff, 80%);
 
 // LINKLISTING
-$color-linksticky: #2E6E02;
+$color-linksticky: mix($color-pinkblood, #000, 80%);
 $color-linkpromoted: #c90;
 
 // COMMENTS
-$color-content-base: #036;
+$color-content-base: #069;
 
 // CONTRASTS
 $color-body-bg-contrast: color-contrast($color-body-bg);

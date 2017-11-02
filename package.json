@@ -5,14 +5,33 @@
   "main": "dev.js",
   "scripts": {
     "dev": "node dev.js",
-    "scss": "node-sass styles -o build --output-style compact",
-    "autoprefixer": "postcss -u autoprefixer --autoprefixer.browsers 'last 2 versions, ie 9' -r build/*.css",
-    "reddit-unsupported": "sed -i -- 's/-ms-interpolation[^;]\\+;//g' build/*.css",
+    "watch": "nodemon --watch styles --ext scss --exec \"npm run scss\"",
+    "imagemin": "imagemin images/* --out-dir=build/images",
+    "scss": "node-sass styles -o build --output-style compact --source-map false",
+    "autoprefixer": "postcss -u autoprefixer -r build/*.css",
+    "remove-wkboxflex": "sed -i -- 's/-webkit-box-flex[^;]\\+;//g' build/*.css",
+    "remove-wkboxorient": "sed -i -- 's/-webkit-box-orient[^;]\\+;//g' build/*.css",
+    "remove-wkboxpack": "sed -i -- 's/-webkit-box-pack[^;]\\+;//g' build/*.css",
+    "remove-wkdir": "sed -i -- 's/-webkit-box-direction[^;]\\+;//g' build/*.css",
+    "remove-wkordg": "sed -i -- 's/-webkit-box-ordinal-group[^;]\\+;//g' build/*.css",
+    "remove-wkgrad": "sed -i -- 's/-webkit-gradient[^;]\\+;//g' build/*.css",
+    "unsup-interp": "sed -i -- 's/-ms-interpolation[^;]\\+;//g' build/*.css",
+    "unsup-webkit": "npm run remove-wkboxflex && npm run remove-wkboxorient && npm run remove-wkboxpack && npm run remove-wkdir && npm run remove-wkordg && npm run remove-wkgrad",
+    "reddit-unsupported": "npm run unsup-interp && npm run unsup-webkit",
     "build": "npm run scss && npm run autoprefixer && npm run reddit-unsupported"
   },
+  "browserslist": [
+    "last 2 versions",
+    ">1%"
+  ],
   "devDependencies": {
+    "autoprefixer": "^7.1.1",
     "browser-sync": "^2.18.8",
     "chokidar": "^1.6.1",
-    "node-sass": "^4.5.2"
+    "imagemin-cli": "^3.0.0",
+    "imagemin-pngquant": "^5.0.1",
+    "node-sass": "^4.5.2",
+    "postcss": "^6.0.3",
+    "postcss-cli": "^4.1.0"
   }
 }

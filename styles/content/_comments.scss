@@ -1,470 +1,474 @@
 .commentarea {
-    margin-right: $sidebar-margin;
-    border-right: 1px solid $color-border;
+	margin-right: $sidebar-margin;
+	border-right: 1px solid $color-border;
 
-    > .menuarea,
-    > .infobar {
-        margin: 5px 0 5px $comment-paddingleft;
-        border-right: 0 none !important;
-    }
+	> .menuarea,
+	> .infobar {
+		margin: 5px 0 5px $comment-paddingleft;
+		border-right: 0 none !important;
+	}
 
-    .sitetable {
-        padding-top: 14px;
-    }
+	.sitetable {
+		padding-top: 14px;
+	}
 
-    .gold-accent.comment-visits-box {
-        display: block;
-        margin: 10px 0 10px 32px;
-        max-width: initial;
+	.gold-accent.comment-visits-box {
+		display: block;
+		margin: 10px 0 10px 32px;
+		max-width: initial;
 
-        text-align: center;
+		text-align: center;
 
-        border-right: 0 none;
-    }
+		border-right: 0 none;
+	}
 }
 
 .panestack-title {
-    padding: .5em 1em;
-    margin: 15px 0;
+	padding: 0.5em 1em;
+	margin: 15px 0;
 
-    border: 0 none;
-    border-top: 1px solid $color-border;
+	border: 0 none;
+	border-top: 1px solid $color-border;
 
-    .title {
-        font-size: 20px;
-    }
+	.title {
+		font-size: 20px;
+	}
 }
 
 .commentarea form.usertext.cloneable {
-    margin: 0;
-    padding: 14px 0 0 $comment-paddingleft;
+	margin: 0;
+	padding: 14px 0 0 $comment-paddingleft;
 
-    .commentingAs {
-        padding: 0 8px !important;
-        height: $comment-taglineheight;
+	.commentingAs {
+		padding: 0 8px !important;
+		height: $comment-taglineheight;
 
-        line-height: $comment-taglineheight;
-        font-size: 14px;
+		line-height: $comment-taglineheight;
+		font-size: 14px;
 
-        color: $color-content-base;
-        background: #fff;
-        border: 1px solid $color-border;
-        border-radius: 0 !important;
+		color: $color-content-base;
+		background: #fff;
+		border: 1px solid $color-border;
+		border-radius: 0 !important;
 
-        a {
-            font-weight: bold;
-        }
-    }
+		a {
+			font-weight: bold;
+		}
+	}
 }
 
 .thing.comment,
 .thing.reddit-link {
-    position: relative;
-    overflow: visible !important;
+	position: relative;
+	overflow: visible !important;
 
-    .midcol {
-        position: absolute;
-        left: 0;
+	.midcol {
+		position: absolute;
+		left: 0;
 
-        .arrow {
-            $width: 8px;
-            $height: 12px;
+		.arrow {
+			$width: 8px;
+			$height: 12px;
 
-            margin-bottom: $height * 0.5;
-            width: 0;
-            height: 0;
-            background: transparent;
-            border: $width solid transparent;
-            border-top: 0 none;
+			margin-bottom: $height * 0.5;
+			width: 0;
+			height: 0;
+			background: transparent;
+			border: $width solid transparent;
+			border-top: 0 none;
 
-            &.up {
-                border-bottom: $height solid mix($color-body-bg, #000, 50%);
-            }
+			&.up {
+				border-bottom: $height solid mix($color-body-bg, #000, 50%);
+			}
 
-            &.upmod {
-                border-bottom: $height solid $color-upvote;
-            }
+			&.upmod {
+				border-bottom: $height solid $color-upvote;
+			}
 
-            &.down {
-                border-top: $height solid mix($color-body-bg, #000, 50%);
-            }
+			&.down {
+				border-top: $height solid mix($color-body-bg, #000, 50%);
+			}
 
-            &.downmod {
-                border-top: $height solid $color-downvote;
-            }
-        }
-    }
+			&.downmod {
+				border-top: $height solid $color-downvote;
+			}
+		}
+	}
 }
 
 .thing.comment {
-    body .content & {
-        // Specificity thanks to RES
-        margin: 0 0 14px !important;
-        padding: 0 0 0 $comment-paddingleft !important;
+	body .content & {
+		// Specificity thanks to RES
+		margin: 0 0 14px !important;
+		padding: 0 0 0 $comment-paddingleft !important;
 
-        background-color: transparent !important;
-        border: 0 none !important;
-    }
+		background-color: transparent !important;
+		border: 0 none !important;
+	}
 
-    .midcol {
-        margin: ($comment-taglineheight + 8px) 0 0;
-        width: $comment-paddingleft;
-    }
+	.midcol {
+		margin: ($comment-taglineheight + 8px) 0 0;
+		width: $comment-paddingleft;
+	}
 
-    .entry {
-        overflow: visible;
-        padding: 0;
+	.entry {
+		overflow: visible;
+		padding: 0;
 
-        .md .RESUserTag {
-            display: none;
-        }
-    }
+		.md .RESUserTag {
+			display: none;
+		}
+	}
 
-    .tagline {
-        position: relative;
-        display: block;
-        height: $comment-taglineheight;
+	.tagline {
+		position: relative;
+		display: block;
+		height: $comment-taglineheight;
 
-        line-height: $comment-taglineheight;
-        font-size: 14px;
+		line-height: $comment-taglineheight;
+		font-size: 14px;
 
-        color: #000;
-        border: 0 solid $color-border;
-        border-width: 0 0 1px 1px;
-    }
+		color: #000;
+		border: 0 solid $color-border;
+		border-width: 0 0 1px 1px;
+	}
 
-    .tagline .author,
-    .tagline .userattrs,
-    .tagline .RESUserTag,
-    > .entry .expand + em {
-        float: left;
-        display: block;
-        margin: -1px 0 -1px -1px;
-        padding: 0 8px !important;
+	.tagline .author,
+	.tagline .userattrs,
+	.tagline .RESUserTag,
+	> .entry .expand + em {
+		float: left;
+		display: block;
+		margin: -1px 0 -1px -1px;
+		padding: 0 8px !important;
 
-        color: $color-content-base;
-        background: #fff;
-        border-width: 1px;
-        border-radius: 0 !important;
-    }
+		color: $color-content-base;
+		background: #fff;
+		border-width: 1px;
+		border-radius: 0 !important;
+	}
 
-    .expand {
-        position: absolute;
-        left: ($comment-taglineheight + $comment-paddingleft + 2px) / -2;
+	.expand {
+		position: absolute;
+		left: ($comment-taglineheight + $comment-paddingleft + 2px) / -2;
 
-        display: block;
-        margin: 0;
-        padding: 0;
+		display: block;
+		margin: 0;
+		padding: 0;
 
-        width: $comment-taglineheight;
-        height: $comment-taglineheight;
+		width: $comment-taglineheight;
+		height: $comment-taglineheight;
 
-        color: transparent !important;
-        border: 0 none;
-        border-radius: 50%;
+		color: transparent !important;
+		border: 0 none;
+		border-radius: 50%;
 
-        &:hover {
-            $light: mix(#fff, #069, 50%);
-            text-decoration: none;
+		&:hover {
+			$light: mix(#fff, #069, 50%);
+			text-decoration: none;
 
-            background-color: $light;
-            box-shadow: 0 0 1px $light, 0 0 2px $light, 0 0 3px $light;
-        }
-    }
+			background-color: $light;
+			box-shadow: 0 0 1px $light, 0 0 2px $light, 0 0 3px $light;
+		}
+	}
 
-    .flair {
-        position: absolute;
-        bottom: -1px;
-        right: 100%;
-        left: -1 * ($comment-paddingleft + 1px);
-        z-index: 10;
+	.flair {
+		position: absolute;
+		bottom: -1px;
+		right: 100%;
+		left: -1 * ($comment-paddingleft + 1px);
+		z-index: 10;
 
-        margin: 0 auto;
+		margin: 0 auto;
 
-        pointer-events: none;
-    }
+		pointer-events: none;
+	}
 
-    .author::before {
-        content: 'u/';
-    }
+	.author::before {
+		content: "u/";
+	}
 
-    .userattrs {
-        padding: 0 4px !important;
+	.userattrs {
+		padding: 0 4px !important;
 
-        &:empty {
-            display: none;
-        }
-    }
+		&:empty {
+			display: none;
+		}
+	}
 
-    .score,
-    .tagline .score-hidden,
-    time {
-        margin-left: 10px;
-        font-weight: 400;
-    }
+	.score,
+	.tagline .score-hidden,
+	time {
+		margin-left: 10px;
+		font-weight: 400;
+	}
 
-    time {
-        font-weight: 700;
-    }
+	time {
+		font-weight: 700;
+	}
 
-    .usertext {
-        border-width: 0 0 0 1px;
+	.usertext {
+		border-width: 0 0 0 1px;
 
-        .usertext-body {
-            padding-bottom: 0;
-        }
+		.usertext-body {
+			padding-bottom: 0;
+		}
 
-        &.border .usertext-body {
-            padding-left: 10px;
-        }
-    }
+		&.border .usertext-body {
+			padding-left: 10px;
+		}
+	}
 
-    .flat-list {
-        border-width: 0 0 1px 1px;
-    }
+	.flat-list {
+		border-width: 0 0 1px 1px;
+	}
 
-    body & div.child {
-        // Specificity thanks to RES
-        margin-top: 0;
-        margin-left: 0;
+	body & div.child {
+		// Specificity thanks to RES
+		margin-top: 0;
+		margin-left: 0;
 
-        border: 0 none;
-        border-left: 1px solid $color-border !important;
-        background: rgba(#fff, .15);
-    }
+		border: 0 none;
+		border-left: 1px solid $color-border !important;
+		background: rgba(#fff, 0.15);
+	}
 
-    &.collapsed {
-        margin-bottom: 15px;
+	&.collapsed {
+		margin-bottom: 15px;
 
-        .midcol {
-            display: none;
-        }
+		.midcol {
+			display: none;
+		}
 
-        .flair {
-            display: inline-block;
-        }
-    }
+		.flair {
+			display: inline-block;
+		}
+	}
 
-    > .entry .author,
-    > .entry .userattrs,
-    > .entry .RESUserTag,
-    > .entry .usertext,
-    > .entry .flat-list,
-    > .entry .expand + em {
-        background-color: rgba(#fff, 0.5);
-        border-style: solid;
-        border-color: $color-border;
-    }
+	> .entry .author,
+	> .entry .userattrs,
+	> .entry .RESUserTag,
+	> .entry .usertext,
+	> .entry .flat-list,
+	> .entry .expand + em {
+		background-color: rgba(#fff, 0.5);
+		border-style: solid;
+		border-color: $color-border;
+	}
 
-    &.new-comment {
-        > .entry .author,
-        > .entry .userattrs,
-        > .entry .RESUserTag,
-        > .entry .usertext,
-        > .entry .flat-list {
-            background: mix(#069, #fff, 25%);
-        }
-    }
+	&.new-comment {
+		> .entry .author,
+		> .entry .userattrs,
+		> .entry .RESUserTag,
+		> .entry .usertext,
+		> .entry .flat-list {
+			background: mix(#069, #fff, 25%);
+		}
+	}
 
-    &.stickied {
-        > .entry .author,
-        > .entry .userattrs,
-        > .entry .RESUserTag,
-        > .entry .usertext,
-        > .entry .flat-list {
-            background: mix(#282, #fff, 25%);
-        }
-    }
+	&.stickied {
+		> .entry .author,
+		> .entry .userattrs,
+		> .entry .RESUserTag,
+		> .entry .usertext,
+		> .entry .flat-list {
+			background: mix(rgba(#fff, 0.5), $color-linksticky, 70%);
+		}
+	}
 
-    &.banned-user {
-        overflow: visible;
+	.tagline .stickied-tagline,
+	.search-result-meta .stickied-tagline {
+		color: $color-linksticky;
+	}
 
-        > .entry .author,
-        > .entry .userattrs,
-        > .entry .RESUserTag,
-        > .entry .usertext,
-        > .entry .flat-list {
-            background: rgba(250,128,114,0.5);
-        }
-    }
+	&.banned-user {
+		overflow: visible;
 
-    &.spam {
-        > .entry .author,
-        > .entry .userattrs,
-        > .entry .RESUserTag,
-        > .entry .usertext,
-        > .entry .flat-list {
-            background: #fa8072;
-        }
-    }
+		> .entry .author,
+		> .entry .userattrs,
+		> .entry .RESUserTag,
+		> .entry .usertext,
+		> .entry .flat-list {
+			background: rgba(250, 128, 114, 0.5);
+		}
+	}
 
-    > .entry .usertext.border {
-        &,
-        & + .flat-list {
-            background-color: mix(#fc0, #fff, 25%);
-        }
-    }
+	&.spam {
+		> .entry .author,
+		> .entry .userattrs,
+		> .entry .RESUserTag,
+		> .entry .usertext,
+		> .entry .flat-list {
+			background: #fa8072;
+		}
+	}
 
-    &.deleted {
-        > .entry .expand + em,
-        > .entry .usertext,
-        > .entry .flat-list {
-            background: #ddd;
-        }
+	> .entry .usertext.border {
+		&,
+		& + .flat-list {
+			background-color: mix(#fc0, #fff, 25%);
+		}
+	}
 
-        > .entry .usertext-body {
-            display: block;
-            padding: 8px 14px !important;
-        }
-    }
+	&.deleted {
+		> .entry .expand + em,
+		> .entry .usertext,
+		> .entry .flat-list {
+			background: #ddd;
+		}
 
-    /* /r/subreddit/comments */
-    .content > .linklisting > & {
-        margin-top: 20px;
-        padding-top: 0;
+		> .entry .usertext-body {
+			display: block;
+			padding: 8px 14px !important;
+		}
+	}
 
-        &::before {
-            content: '';
+	/* /r/subreddit/comments */
+	.content > .linklisting > & {
+		margin-top: 20px;
+		padding-top: 0;
 
-            position: absolute;
-            top: 0;
-            right: 0;
+		&::before {
+			content: "";
 
-            width: 40%;
-            height: 1px;
+			position: absolute;
+			top: 0;
+			right: 0;
 
-            background: linear-gradient(to right, transparent, $color-border);
-        }
+			width: 40%;
+			height: 1px;
 
+			background: linear-gradient(to right, transparent, $color-border);
+		}
 
-        &:first-child {
-            margin-top: 0;
-        }
+		&:first-child {
+			margin-top: 0;
+		}
 
-        .parent {
-            padding: 6px 0;
+		.parent {
+			padding: 6px 0;
 
-            line-height: 1.4em;
+			line-height: 1.4em;
 
-            color: $color-content-base;
+			color: $color-content-base;
 
-            .title {
-                display: block;
-                margin: 0;
-                text-transform: uppercase;
-            }
+			.title {
+				display: block;
+				margin: 0;
+				text-transform: uppercase;
+			}
 
-            .flair {
-                display: none;
-            }
-        }
+			.flair {
+				display: none;
+			}
+		}
 
-        .parent,
-        .entry .tagline {
-            border-right: 1px solid $color-border;
-        }
+		.parent,
+		.entry .tagline {
+			border-right: 1px solid $color-border;
+		}
 
-        .entry .usertext {
-            border-width: 0 1px;
-        }
+		.entry .usertext {
+			border-width: 0 1px;
+		}
 
-        .entry .flat-list {
-            border-width: 0 1px 1px;
-        }
-    }
+		.entry .flat-list {
+			border-width: 0 1px 1px;
+		}
+	}
 }
 
 .thing.morechildren {
-    .tagline {
-        display: none;
-    }
+	.tagline {
+		display: none;
+	}
 
-    .morecomments {
-        display: block;
-        padding-left: $comment-paddingleft;
+	.morecomments {
+		display: block;
+		padding-left: $comment-paddingleft;
 
-        .button {
-            display: inline-block;
-            margin: 0;
-            padding: 6px 10px;
+		.button {
+			display: inline-block;
+			margin: 0;
+			padding: 6px 10px;
 
-            font-size: 11px !important;
+			font-size: 11px !important;
 
-            background: #eee;
-            border: 1px solid #ccc;
+			background: #eee;
+			border: 1px solid #ccc;
 
-            &:hover {
-                background: #fff;
-                text-decoration: none;
-            }
-        }
-    }
+			&:hover {
+				background: #fff;
+				text-decoration: none;
+			}
+		}
+	}
 }
 
 .thing.morerecursion {
-    display: block;
-    padding: 0 0 10px $comment-paddingleft;
+	display: block;
+	padding: 0 0 10px $comment-paddingleft;
 
-    .deepthread {
-        display: block;
+	.deepthread {
+		display: block;
 
-        &::after {
-            content: unset;
-        }
-    }
+		&::after {
+			content: unset;
+		}
+	}
 
-    .deepthread a {
-        position: relative;
-        display: inline-block;
-        padding: 0 10px;
+	.deepthread a {
+		position: relative;
+		display: inline-block;
+		padding: 0 10px;
 
-        line-height: $comment-taglineheight;
-        font-size: 13px !important;
-        text-transform: uppercase;
+		line-height: $comment-taglineheight;
+		font-size: 13px !important;
+		text-transform: uppercase;
 
-        background: #eee;
-        border: 1px solid #BEBEBE;
-        border-right: 0 none;
+		background: #eee;
+		border: 1px solid #bebebe;
+		border-right: 0 none;
 
-        &::before {
-            top: -1px;
-            border-width: 0.5 * ($comment-taglineheight + 2) 17px;
-            border-color: transparent #BEBEBE;
-        }
+		&::before {
+			top: -1px;
+			border-width: 0.5 * ($comment-taglineheight + 2) 17px;
+			border-color: transparent #bebebe;
+		}
 
-        &::after {
-            margin: 1px 0;
-            border-width: ($comment-taglineheight / 2) 16px;
-            border-color: transparent #eee;
-        }
+		&::after {
+			margin: 1px 0;
+			border-width: ($comment-taglineheight / 2) 16px;
+			border-color: transparent #eee;
+		}
 
-        &::before,
-        &::after {
-            content: '';
+		&::before,
+		&::after {
+			content: "";
 
-            position: absolute;
-            top: -1px;
-            left: 100%;
+			position: absolute;
+			top: -1px;
+			left: 100%;
 
-            width: 0;
-            height: 0;
+			width: 0;
+			height: 0;
 
-            border-style: solid;
-            border-right: 0 none;
-        }
+			border-style: solid;
+			border-right: 0 none;
+		}
 
-        &:hover {
-            text-decoration: none;
-            background: #fff;
+		&:hover {
+			text-decoration: none;
+			background: #fff;
 
-            &::after {
-                border-color: transparent #fff;
-            }
-        }
-    }
+			&::after {
+				border-color: transparent #fff;
+			}
+		}
+	}
 
-    .tagline,
-    .child {
-        display: none;
-    }
+	.tagline,
+	.child {
+		display: none;
+	}
 }

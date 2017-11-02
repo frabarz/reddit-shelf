@@ -1,79 +1,114 @@
 #header-bottom-right {
-    $color-bgcontrast: color-contrast($color-header-mainbar);
+	$color-bgcontrast: color-contrast($color-header-mainbar);
 
-    position: static;
-    display: block;
+	position: static;
+	display: block;
 
-    margin: 0;
-    padding: 0 10px;
-    height: 35px;
+	margin: 0;
+	padding: 0 10px;
+	height: 35px;
 
-    line-height: 35px;
-    font-size: 12px;
-    text-align: right;
+	line-height: 35px;
+	font-size: 12px;
+	text-align: right;
 
-    background: $color-header-mainbar;
-    border-top: 1px solid mix($color-header-mainbar, #000, 90%);
-    border-radius: 0;
-    box-shadow: material-shadow(1);
+	background: $color-header-mainbar;
+	border-top: 1px solid mix($color-header-mainbar, #000, 90%);
+	border-radius: 0;
+	box-shadow: material-shadow(1);
 
-    a,
-    span,
-    ul,
-    form {
-        position: static;
-        display: inline-block;
-        vertical-align: top;
-        color: $color-bgcontrast;
-    }
+	a,
+	span,
+	ul,
+	form {
+		position: static;
+		display: inline-block;
+		vertical-align: top;
+		color: $color-bgcontrast;
+	}
 
-    a {
-        color: mix($color-bgcontrast, #808080, 50%);
-    }
+	a {
+		color: mix($color-bgcontrast, #808080, 50%);
+	}
 
-    .loggedin & .user {
-        margin: 3px;
-        padding: 0 10px;
+	.loggedin & .user {
+		margin: 3px;
+		padding: 0 10px;
 
-        line-height: 29px;
-        font-size: 14px;
+		line-height: 29px;
+		font-size: 14px;
 
-        background: mix($color-header-mainbar, $color-bgcontrast, 75%);
-        border-radius: 20px;
-    }
+		background: mix($color-header-mainbar, $color-bgcontrast, 75%);
+		border-radius: 20px;
+	}
 
-    .separator {
-        display: none;
-    }
+	.separator {
+		display: none;
+	}
 
-    .pref-lang {
-        font-weight: normal
-    }
+	.pref-lang {
+		font-weight: normal;
+	}
 
-    .logout a {
-        padding: 0 10px;
-    }
+	.logout a {
+		padding: 0 10px;
+	}
+
+	a.message-count {
+		position: fixed;
+		top: 237px;
+		right: 0;
+		z-index: 1000;
+
+		display: block;
+		margin: $sidebar-cellpadding;
+		padding: 0;
+		width: 300px - 2px;
+
+		line-height: 30px;
+		font-size: 1rem;
+		text-align: center;
+
+		color: #fff;
+		border: 1px solid $color-border;
+
+		&::before {
+			content: "You have ";
+		}
+
+		&::after {
+			content: " new messages";
+		}
+	}
 }
 
 #mail,
 #modmail,
 #new_modmail,
 .loggedin #header-bottom-right .pref-lang {
-    overflow: hidden;
-    height: 35px;
-    width: 35px;
+	overflow: hidden;
+	height: 35px;
+	width: 35px;
 
-    text-indent: 36px;
+	text-indent: 36px;
 
-    background: $url-assetsdrrp 0/#{295px} !important;
+	background: $url-assetsdrrp 0/#{295px} !important;
 }
 
-#mail { background-position: -95px 0 !important;}
-#modmail { background-position: -130px 0 !important;}
-#new_modmail {background-position: -165px 0 !important;}
-.loggedin #header-bottom-right .pref-lang {background-position: -200px 0 !important;}
+#mail {
+	background-position: -95px 0 !important;
+}
+#modmail {
+	background-position: -130px 0 !important;
+}
+#new_modmail {
+	background-position: -165px 0 !important;
+}
+.loggedin #header-bottom-right .pref-lang {
+	background-position: -200px 0 !important;
+}
 
 #userbarToggle {
-    /* RES: Hides the button to toggle the bar, since we are using it for CSS */
-    display: none !important;
+	/* RES: Hides the button to toggle the bar, since we are using it for CSS */
+	display: none !important;
 }
